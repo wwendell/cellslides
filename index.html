@@ -130,6 +130,10 @@
 					{ src: 'plugin/math/math.js', async: true }
 				]
 			});
+			
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+				MathJax.Hub.Rerender();
+			});
 
 		</script>
 
