@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -61,6 +61,25 @@
 						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
 					</aside>
 				</section>
+
+				<section>
+                    <h2>Floating Image</h2>
+                    <ul>
+                        <li><em>grayscale</em></li>
+                        <li><em>sepia</em></li>
+                        <li><em>saturate</em></li>
+                        <li><em>invert</em></li>
+                        <li><em>opacity</em></li>
+                    </ul>
+					<div id="flower1" class="sepia" style="width:25%;float:right">
+                    	<img id="flower12" class="transparent" src="http://blattchat.com/presos/MyBrowserCanDoThat/img/flower.jpg">
+						<img id="flower13" class="transparent" src="http://blattchat.com/presos/MyBrowserCanDoThat/img/flower.jpg">
+					</div>
+                    <div id="flower1" class="sepia" style="width:25%;float:right">
+                    	<img id="flower13" class="transparent" src="http://blattchat.com/presos/MyBrowserCanDoThat/img/flower.jpg">
+					</div>
+                    
+                </section>
 
 				<!-- Example of nested vertical slides -->
 				<section>
@@ -143,14 +162,9 @@
 
 						For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
 
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  For those of you who like that sort of thing.
-						  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
+						| Table | More Table |
+						------- | ------------
+						Text    |   More text
 					</script>
 				</section>
 
@@ -371,11 +385,16 @@ function linkify( selector ) {
 				center: true,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+				transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
 
 				// Parallax scrolling
 				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
 				// parallaxBackgroundSize: '2100px 900px',
+				
+				math: {
+					mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
+					config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+				},
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
@@ -384,7 +403,8 @@ function linkify( selector ) {
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/math/math.js', async: true }
 				]
 			});
 
