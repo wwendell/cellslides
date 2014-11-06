@@ -43,24 +43,25 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h3>Maximal $\alpha_2$ in Monodisperse Systems</h4>
-					<h4>November 7, 2014</h3>
+					<h2>$\alpha_2$ in Monodisperse Systems</h2>
+					<h4>November 7, 2014</h4>
 					<p>
 						<small>Wendell Smith</small>
 					</p>
 				</section>
 
 				<section>
-                    <h2>Floating Image</h2>
-                    <ul>
-                        <li><em>grayscale</em></li>
-                        <li><em>sepia</em></li>
-                        <li><em>saturate</em></li>
-                        <li><em>invert</em></li>
-                        <li><em>opacity</em></li>
-                    </ul>
-					<div style="width:60%;float:right">
-                        <img id="MSDs" class="None" src="imgs/CDrsqsmono3-MSDs-good.svg">
+                    <h3>Simple Monodisperse Systems</h3>
+                    <h4>Relaxation Time</h4>
+                    <div style="width:45%;float:left;font-size:30px">
+                        <ul>
+                            <li><em>Relaxation time:</em>the amount of time a particle takes to move its own diameter</li>
+                            <li>Scales exponentially with $\Delta \phi$</li>
+                            <li>At higher densities, this is difficult to measure</li>
+                        </ul>
+                    </div>
+					<div style="width:50%;float:right">
+                        <img id="MSDs" class="None" src="imgs/CDrsqsmono3-relax-phi.svg" width="100%">
 					</div>
                     
                 </section>
@@ -118,8 +119,8 @@ def function(x, y=32):
 				progress: true,
 				history: false,
 				center: true,
-
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
 				transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
 
 				// Parallax scrolling
