@@ -1,155 +1,187 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
 
-		<title>Presentation</title>
+    <title>Presentation</title>
 
-		<meta name="description" content="Diffusion in Cells Project">
-		<meta name="author" content="Wendell Smith">
+    <meta name="description" content="Diffusion in Cells Project">
+    <meta name="author" content="Wendell Smith">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/simpleminusborder.css" id="theme">
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/simpleminusborder.css" id="theme">
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-		<script>
-			if( window.location.search.match( /print-pdf/gi ) ) {
-				var link = document.createElement( 'link' );
-				link.rel = 'stylesheet';
-				link.type = 'text/css';
-				link.href = 'css/print/pdf.css';
-				document.getElementsByTagName( 'head' )[0].appendChild( link );
-			}
-		</script>
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if( window.location.search.match( /print-pdf/gi ) ) {
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'css/print/pdf.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        }
+    </script>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
 
-	<body>
+<body>
+<div class="reveal">
 
-		<div class="reveal">
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+        <section>
+            <h2>$\alpha_2$ in Monodisperse Systems</h2>
+            <h4>November 7, 2014</h4>
+            <p>
+                <small>Wendell Smith</small>
+            </p>
+        </section>
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h2>$\alpha_2$ in Monodisperse Systems</h2>
-					<h4>November 7, 2014</h4>
-					<p>
-						<small>Wendell Smith</small>
-					</p>
-				</section>
+        <section>
+            <h3>MSDs</h3> 
+            <h4>$(N=100)$</h4>
+            <div style="width:45%;float:left;font-size:30px">
+                <ul>
+                    <li>The standard shape of an MSD</li>
+                    <li>Almost linear for small $\phi$</li>
+                    <li>Flat region for larger $\phi$</li>
+                </ul>
+            </div>
+            <div style="width:50%;float:right">
+            <img id="MSDs" style="width:100%" src="imgs/141107/CDrsqsmono3-MSDs-good.svg">
+            </div>
+            
+        </section>
+        
+        <section>
+            <section>
+                <h3>Fourth Power</h3>
+                <h4>$\left< x^4 \right>$</h4>
+                <div style="width:45%;float:left;font-size:24px">
+                    <ul>
+                        <li>Ratio of $\left< x^4 \right>$ to MSD determines $\alpha_2$:<br>
+                        $\alpha_2 = \frac{\left< x^4 \right>}{3 \left< x^2 \right>^2 }- 1$
+                        <li>$\left< x^4 \right>$ looks very similar to $\left< x^2 \right>$</li>
+                    </ul>
+                </div>
+                <div style="width:50%;float:right">
+                    <img id="MSDs" style="width:100%" src="imgs/141107/CDrsqsmono3-M4Ds-good.svg">
+                </div>
+            </section>
+            
+            
+            <section>
+                <h3>Fourth Power</h3>
+                <h4>Without the time-component</h4>
+                <div style="width:45%;float:left;font-size:24px">
+                    <ul>
+                        <li>Filled area is between $3\left< x^2 \right>$ and $\left< x^4 \right>$</li>
+                        <li>Area corresponds to $\alpha_2$</li>
+                        <li>$\alpha_2 = \frac{\left< x^4 \right>}{3 \left< x^2 \right>^2 }- 1$</li>
+                    </ul>
+                </div>
+                <div style="width:50%;float:right">
+                    <img id="MSDs" style="width:100%" src="imgs/141107/CDrsqsmono3-MSDs-M4Ds-good.svg">
+                </div>
+            </section>
+        </section>
+        
+        <section>
+            <h3>$\alpha_2$</h3>
+            <div style="width:45%;float:left;font-size:24px">
+                <ul>
+                    <li>Goes up to $1.6$, but no higher</li>
+                    <li>At higher densities, this is increasingly difficult to measure</li>
+                    <li>As density increases, we expect $\alpha_2$ to remain under $1.6$</li>
+                </ul>
+            </div>
+            <div style="width:50%;float:right">
+                <img src="imgs/141107/CDrsqsmono3-alpha2.svg" style="width:100%">
+            </div>
+            
+        </section>
+        
+        <section>
+            <h3>Simple Monodisperse Systems</h3>
+            <h4>Relaxation Time</h4>
+            <div style="width:45%;float:left;font-size:30px">
+                <ul>
+                    <li><em>Relaxation time:</em>the amount of time a particle takes to move its own diameter</li>
+                    <li>Scales exponentially with $\Delta \phi$</li>
+                    <li>At higher densities, this is difficult to measure</li>
+                </ul>
+            </div>
+            <div style="width:50%;float:right">
+                <img id="MSDs" class="None" src="imgs/141107/CDrsqsmono3-relax-phi.svg" width="100%">
+            </div>
+            
+        </section>
 
-				<section>
-                    <h3>Simple Monodisperse Systems</h3>
-                    <h4>Relaxation Time</h4>
-                    <div style="width:45%;float:left;font-size:30px">
-                        <ul>
-                            <li><em>Relaxation time:</em>the amount of time a particle takes to move its own diameter</li>
-                            <li>Scales exponentially with $\Delta \phi$</li>
-                            <li>At higher densities, this is difficult to measure</li>
-                        </ul>
-                    </div>
-					<div style="width:50%;float:right">
-                        <img id="MSDs" class="None" src="imgs/CDrsqsmono3-relax-phi.svg" width="100%">
-					</div>
-                    
-                </section>
+    </div>
 
-				<section>
-					<h2>Latex, Maybe?</h2>
-					<ul>
-						<li>Simple: $a^2 + b^2 = c^2$</li>
-						<li>Complex: $\int_0^\infty \frac{1}{\sigma \sqrt{2 \pi}} e^{-\frac{x^2}{2\sigma^2}} = 1$</li>
-					</ul>
-                </section>
-                
-				<section>
-					<h2>Some code!</h2>
-					<pre><code data-trim>
-def function(x, y=32):
-    print("abc")
-					</code></pre>
-                </section>
-                
-				<section>
-					<h2>How about a Movie?</h2>
-					<video  controls class="stretch">
-						<source src="http://www.w3schools.com/tags/movie.ogg" type="video/ogg">
-					    <source src="http://www.w3schools.com/tags/movie.mp4" type="video/mp4">
-					  Your browser does not support the video tag.
-					</video>
-                </section>
+</div>
 
-				<section>
-					<video  controls class="stretch">
-						<source src="http://www.w3schools.com/tags/movie.ogg" type="video/ogg">
-					    <source src="http://www.w3schools.com/tags/movie.mp4" type="video/mp4">
-					  Your browser does not support the video tag.
-					</video>
-                </section>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
 
-				<section>
-					<h1>THE END</h1>
-				</section>
+<script>
 
-			</div>
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        
+        width: 960,
+        height: 720,
+        margin: 0.05,
+        minScale: 0.2,
+        maxScale: 4.0,
 
-		</div>
+        
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+        
+        math: {
+            // Use secure mathjax so that it will work with https://git.yale.edu
+            mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
+            config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+        },
 
-		<script>
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+            { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+            { src: 'plugin/math/math.js', async: true }
+        ]
+    });
+    
+    Reveal.addEventListener( 'slidechanged', function( event ) {
+        MathJax.Hub.Rerender();
+    });
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: false,
-				center: true,
-                
-                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
-
-				// Parallax scrolling
-				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-				// parallaxBackgroundSize: '2100px 900px',
-				
-				math: {
-					// Use secure mathjax so that it will work with https://git.yale.edu
-					mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
-					config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
-				},
-
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/math/math.js', async: true }
-				]
-			});
-			
-			Reveal.addEventListener( 'slidechanged', function( event ) {
-				MathJax.Hub.Rerender();
-			});
-
-		</script>
-
-	</body>
+</script>
+</body>
 </html>
