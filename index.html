@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - Slide Test</title>
+		<title>Slide Test</title>
 
 		<meta name="description" content="A basic example of using reveal.js">
 		<meta name="author" content="Wendell Smith">
@@ -43,8 +43,8 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
+					<h1>Slide Test</h1>
+					<h3>Subtitle</h3>
 					<p>
 						<small>Presented by Wendell Smith</small>
 					</p>
@@ -78,7 +78,23 @@
                 </section>
                 
 				<section>
+					<h2>Some code!</h2>
+					<pre><code data-trim>
+def function(x, y=32):
+    print("abc")
+					</code></pre>
+                </section>
+                
+				<section>
 					<h2>How about a Movie?</h2>
+					<video  controls class="stretch">
+						<source src="http://www.w3schools.com/tags/movie.ogg" type="video/ogg">
+					    <source src="http://www.w3schools.com/tags/movie.mp4" type="video/mp4">
+					  Your browser does not support the video tag.
+					</video>
+                </section>
+
+				<section>
 					<video  controls class="stretch">
 						<source src="http://www.w3schools.com/tags/movie.ogg" type="video/ogg">
 					    <source src="http://www.w3schools.com/tags/movie.mp4" type="video/mp4">
@@ -104,7 +120,7 @@
 			Reveal.initialize({
 				controls: true,
 				progress: true,
-				history: true,
+				history: false,
 				center: true,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
