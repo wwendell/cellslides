@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Presentation</title>
+
+	<meta name="description" content="Diffusion in Cells Project">
+	<meta name="author" content="Wendell Smith">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="css/reveal.min.css">
+	<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+	
+	<!-- Remove border from images, add a few styles -->
+	<style media="screen" type="text/css">
+	.reveal section img {
+		margin: 15px 0px;
+		border: 0;
+	}
+	
+	.reveal .lefttext {
+		width:45%;
+		float:left;
+		font-size:30px;
+	}
+	
+	.reveal .rightimage {
+		width:50%;
+		float:right;
+	}
+	
+	.reveal .rightimage img {
+		width:100%;
+	}
+	
+	.reveal li {
+		margin-top: .3em;
+		margin-bottom: .3em;
+	}
+
+	</style>
+
+	<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+	<script>
+		if( window.location.search.match( /print-pdf/gi ) ) {
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = 'css/print/pdf.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		}
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+<div class="reveal">
+
+	<!-- Any section element inside of this container is displayed as a slide -->
+	<div class="slides">
+		<section>
+			<h2>Diffusion in Cells</h2>
+			<h4><i>Group Meeting</i>, November 14, 2014</h4>
+			<p>
+				<small>Wendell Smith</small>
+			</p>
+		</section>
+
+		<section>
+			<section>
+				<h2> Motivation</h2>
+				<h4>Biology</h4>
+				<div class="lefttext">
+					<ul>
+						<li>Particles in cells do not simply diffuse<ul>
+							<li>Movement does not obey $\left< x^2 \right> \propto t$</li>
+							<li>Highly non-Gaussian</li>
+						</ul></li>
+					</ul>
+				</div>
+				<div class="rightimage">
+					<img id="MSDs" src="imgs/141114/parry_crop_line.svg">
+					<p><i>not slope 1!</i></p>
+				</div>
+			</section>
+		
+			<section>
+				<h2>Motivation</h2>
+				<h4>Physics</h4>
+				<ul>
+					<li>Just how non-gaussian can hard spheres get?<ul>
+						<li>At low density, hard spheres are perfectly gaussian</li>
+						<li>Closer to the glass transition, they get somewhat non-gaussian</li>
+					</ul></li>
+				</ul>
+			</section>
+		</section>
+		
+		<section>
+			<section>
+				<h2>What does non-Gaussian mean?</h2>
+				<ul>
+					<li>$\alpha_2 = \frac{\left< x^4 \right> }{3 \left< x^2 \right> } - 1$<ul>
+						<li>For a Gaussian distribution, $\left< x^4 \right> = 3\left< x^2 \right>$, so $\alpha_2 = 0$</li>
+					</ul>
+					</li>
+				</ul>
+			</section>
+			
+			<section>
+				<h2>What does non-Gaussian mean?</h2>
+				<ul>
+					<li>A random walk (diffusion) is Gaussian <i>at any given time</i>:<ul>
+						<li>$P(x, t) = \frac{1}{2 \sqrt{\pi D t}} e^{-\frac{x^2}{4 D t}}$</li>
+					</ul></li>
+					<li>So if the particles aren't diffusing, then $\alpha_2 \neq 0$<ul>
+						<li>For caged particles, $\alpha_2 = -\frac{2}{5}$</li>
+					</ul>
+				</ul>
+			</section>
+			
+			<section>
+				<h2>What does non-Gaussian have to do with the MSD?</h2>
+				<ul>
+					<li>Short answer: its what <i>you can't see</i> in an MSD plot</li>
+					<li>The MSD gives you the <b>mean</b> squared displacement<ul>
+						It measures the <b>width</b> of particle displacements of time
+					</ul></li>
+					<li>$\alpha_2$ measures how "non-gaussian" the distribution is</li>
+				</ul>
+			
+			<div>
+				<div style="width:30%; float:left;">
+					<img src="imgs/141114/example-diffusion-P-t.svg" width="80%">
+					<p>Diffusion</p>
+					<p>$\alpha_2 = 0$</p>
+				</div>
+				<div style="width:30%; float:right;">
+					<img src="imgs/141114/example-mixed-P-t.svg" width="80%">
+					<p>Mixed</p>
+					<p>$\alpha_2 > 0$</p>
+				</div>
+				<div style="width:30%; margin: 0 auto;">
+					<img src="imgs/141114/example-diffusion-caged.svg" width="80%">
+					<p>Caging</p>
+					<p>$\alpha_2 = -\frac{2}{5}$</p>
+				</div>
+			</div>
+			</section>
+		</section>
+
+	</div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+
+	// Full list of configuration options available here:
+	// https://github.com/hakimel/reveal.js#configuration
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+		
+		width: 960,
+		height: 720,
+		margin: 0.05,
+		minScale: 0.2,
+		maxScale: 4.0,
+
+		
+		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+		transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+
+		// Parallax scrolling
+		// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+		// parallaxBackgroundSize: '2100px 900px',
+		
+		math: {
+			// Use secure mathjax so that it will work with https://git.yale.edu
+			mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
+			config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+		},
+
+		// Optional libraries used to extend on reveal.js
+		dependencies: [
+			{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: 'plugin/math/math.js', async: true }
+		]
+	});
+	
+	Reveal.addEventListener( 'slidechanged', function( event ) {
+		MathJax.Hub.Rerender();
+	});
+
+</script>
+</body>
+</html>
