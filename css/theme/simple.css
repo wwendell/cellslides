@@ -7,15 +7,6 @@
  * This theme is Copyright (C) 2012 Owen Versteeg, https://github.com/StereotypicalApps. It is MIT licensed.
  * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
  */
-.reveal table th, .reveal table td {
-  text-align: left;
-  padding: 0.2em 0.5em 0.2em 0.5em;
-  border-bottom: 1px solid; }
-
-.reveal section img {
-  margin: 15px 0px;
-  border: 0; }
-
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
@@ -151,9 +142,7 @@ body {
   padding: 5px;
   overflow: auto;
   max-height: 400px;
-  word-wrap: normal;
-  background: #3F3F3F;
-  color: #DCDCDC; }
+  word-wrap: normal; }
 
 .reveal table {
   margin: auto;
@@ -268,3 +257,12 @@ body {
  *********************************************/
 .reveal .slide-number {
   color: #00008B; }
+
+.reveal table th, .reveal table td {
+  text-align: left;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border-bottom: none; }
+
+.reveal section img {
+  margin: 15px 0px;
+  border: 0; }
