@@ -1,0 +1,55 @@
+= Nucleoids and +++<br>+++Active Matter
+Wendell Smith
+:source-highlighter: pygments
+:pygments-style: autumn
+:revealjs_theme: simple
+:revealjs_transition: none
+// :revealjs_width: 1280
+// :revealjs_height: 1000
+:revealjs_margin: 0.04
+:revealjsdir: http://wackywendell.github.io/reveal.js/
+// :revealjsdir: https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/
+:stem: latexmath
+:imagesdir: imgs
+
+== Nucleoids
+
+[cols="a,a",grid="all",frame="all"]
+|==================================
+|
+image::SCforces-cellshape.svg[scforcesshape, 100%, align="center", title="Soft Potential", caption=""]
+|
+image::SCinner-cellshape.svg[scinnershape, 100%, align="center", title="Solid Nucleoid", caption=""]
+|==================================
+
+=== Nucleoid Flow
+
+[cols="a,a",grid="none",frame="none"]
+|==================================
+|
+image::scforces6-flow.svg[scforcesflow, 100%, align="center", title="Soft Potential", caption=""]
+|
+image::scinner2-flow.svg[scinnerflow, 100%, align="center", title="Solid Nucleoid", caption=""]
+|==================================
+
+See also Ref. {counter2:bib:0} and {counter2:bib:0}.
+
+== Table
+
+[grid="all",frame="all",options="header"]
+|==========================
+| Test | Test 2 | Test 3
+| More | Again  | And again
+|==========================
+
+== Bibliography
+
+[biblography]
+[[stylianidou,{counter:bib}]][{bib}]:: S. Stylianidou, N. J. Kuwada, and P. A. Wiggins, Biophysical Journal 107,  2684 (2014).
+  
+  
+[horizontal]
+[[buterin2014,{counter:bib}]][{bib}]:: 
+  Buterin, Vitalik. “Ethereum: A Next-Generation Smart Contract and 
+  Decentralized Application Platform.”, 2014.
+  https://github.com/ethereum/wiki/wiki/White-Paper.
