@@ -32,7 +32,7 @@ image::scforces6-flow.svg[scforcesflow, 100%, align="center", title="Soft Potent
 image::scinner2-flow.svg[scinnerflow, 100%, align="center", title="Solid Nucleoid", caption=""]
 |==================================
 
-See also Ref. {counter2:bib:0} and {counter2:bib:0}.
+See also Ref. <<styl,1>> and <<but,2>>.
 
 == Table
 
@@ -42,14 +42,15 @@ See also Ref. {counter2:bib:0} and {counter2:bib:0}.
 | More | Again  | And again
 |==========================
 
+== Test
+
+This is some text with footnote:[An example footnote.]
+
 == Bibliography
 
 [biblography]
-[[stylianidou,{counter:bib}]][{bib}]:: S. Stylianidou, N. J. Kuwada, and P. A. Wiggins, Biophysical Journal 107,  2684 (2014).
-  
-  
-[horizontal]
-[[buterin2014,{counter:bib}]][{bib}]:: 
+[[styl]]:: S. Stylianidou, N. J. Kuwada, and P. A. Wiggins, Biophysical Journal 107,  2684 (2014).
+[[but]]:: 
   Buterin, Vitalik. “Ethereum: A Next-Generation Smart Contract and 
   Decentralized Application Platform.”, 2014.
   https://github.com/ethereum/wiki/wiki/White-Paper.

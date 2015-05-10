@@ -1,0 +1,17 @@
+= A Test Document
+Wendell Smith
+:revealjs_theme: simple
+:revealjs_transition: none
+// :revealjs_width: 1280
+// :revealjs_height: 1000
+// :revealjs_margin: 0.04
+// :revealjsdir: http://wackywendell.github.io/reveal.js/
+:revealjsdir: https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/
+:stem: latexmath
+:imagesdir: imgs
+
+== Test
+
+This is some text with 
+
+footnoteref:[testfoot,An example footnote.]
