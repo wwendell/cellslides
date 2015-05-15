@@ -1,56 +1,128 @@
-= Nucleoids and +++<br>+++Active Matter
+= The Cytoplasm and +++<br/>+++Active Matter
 Wendell Smith
 :source-highlighter: pygments
 :pygments-style: autumn
 :revealjs_theme: simple
 :revealjs_transition: none
-// :revealjs_width: 1280
-// :revealjs_height: 1000
+:revealjs_width: 1280
+:revealjs_height: 1000
 :revealjs_margin: 0.04
+:revealjs_history: false
 :revealjsdir: http://wackywendell.github.io/reveal.js/
 // :revealjsdir: https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/
 :stem: latexmath
 :imagesdir: imgs
 
-== Nucleoids
+== The Cytoplasm
 
-[cols="a,a",grid="all",frame="all"]
+[cols=".>a,.>a",grid="all",frame="all"]
 |==================================
-|
-image::SCforces-cellshape.svg[scforcesshape, 100%, align="center", title="Soft Potential", caption=""]
-|
-image::SCinner-cellshape.svg[scinnershape, 100%, align="center", title="Solid Nucleoid", caption=""]
+| *Active Cells* | *Inactivated Cells*:
+Metabolism has been blocked by biochemical means |
 |==================================
 
-=== Nucleoid Flow
+image::parry-MSD-untreated-dnp.png["MSD of untreated vs. DNP+ cells", 100%, caption="", align=center]
 
-[cols="a,a",grid="none",frame="none"]
+[discrete]
+==== Particles in the cytoplasm diffuse much faster when the cell is metabolically active
+
+== Is Metabolism causing this?
+
+[cols="6a,4a"]
 |==================================
 |
-image::scforces6-flow.svg[scforcesflow, 100%, align="center", title="Soft Potential", caption=""]
+* Cells are active, non-equilibrium systems
+* Chemical reactions are constantly consuming energy
+* *Do these reactions raise the effective temperature?*
 |
-image::scinner2-flow.svg[scinnerflow, 100%, align="center", title="Solid Nucleoid", caption=""]
+video::f62_r0.mp4[options="autoplay,loop", width=100%, float=right]
+|
 |==================================
 
-See also Ref. <<styl,1>> and <<but,2>>.
 
-== Table
+// == Is Metabolism causing this?
 
-[grid="all",frame="all",options="header"]
-|==========================
-| Test | Test 2 | Test 3
-| More | Again  | And again
-|==========================
+// [.float-group]
+// --
+// * Cells are active, non-equilibrium systems
+// * Chemical reactions are constantly consuming energy 
 
-== Test
+// [.right]
+// video::f62_r0.mp4[options="autoplay,loop", width=400, float=right]
+// --
 
-This is some text with footnote:[An example footnote.]
+== What is Active Matter?
+
+[discrete]
+=== *Active Matter* is composed of self-driven units, active particles, each capable of converting stored or ambient free energy into systematic movement [cite:marchetti_hydrodynamics_2013]
+
+== Janus Particles
+
+image::janus-h202-traj.png[Janus Particle Trajectories, 75%, title="MSD", caption="", align=center]
+
+ * Particles are half coated with platinum, which catalyzes latexmath:[2 \mathrm{H_2 O_2 \rightarrow 2 H_2 O + O_2}] [cite:howse_2007]
+ * This reaction pushes the particles asymmetrically due to the local osmotic pressure gradient
+
+== Janus Particles
+
+[.float-group]
+--
+image::janus-h202-msd.png[Janus Particle MSDs, 100%, title="MSD", caption="", align=center, float=right]
+
+ * Particles in H~2~O~2~ move much farther
+
+\[
+    \begin{align*}
+    MSD(t) &= \left< \Delta \vec r^2 \right>\\
+    &= \left< \vec r(t)^2 - \vec r(0)^2 \right>
+    \end{align*}
+\]
+--
+
+== Persistent Motion
+
+* Self-propelling particles are typically modeled with "persistent motion": propulsion along some axis of the particle
+* In eukaryotic cells, molecular motors are known to cause cytoplasm "mixing"
+* This mechanism is not expected to exist in E. coli
+
+== Simulating Metabolism
+
+* Hard-sphere-like particles (WCA potential / repulsive Lennard-Jones)
+* Langevin thermostat
+\[
+    \vec F = -\vec \nabla U - \gamma \vec v + \vec \Gamma\left(t\right)
+\]
+* Random, instantaneous "kicks" to the particles
+
+== Random Kicks
+
+* The thermostat gives random kicks, \(\Gamma \sim \Delta t k_B T \sim {10}^{-5} k_B T\)
+
+* Metabolism kicks are between 0 and \(20 k_B T\)
+
+== Simulation
+
+[cols="^a,^a"]
+|==================================
+|
+video::f62_r0.mp4[options="autoplay,loop", float=left, width=100%]
+
+[discrete]
+=== Without Activity
+|
+video::f62_r20.mp4[options="autoplay,loop", float=right, width=100%]
+
+[discrete]
+=== With Activity
+|==================================
+
+== MSDs
+
+image::randkicktest-MSD-f0.62.svg[MSDs with Activity, 70%, title="", caption="", align=center]
+
+* \(f\) is the kick _frequency_, _T_ is the measured _temperature_
+* Kicks that are too frequent raise the temperature
 
 == Bibliography
 
-[biblography]
-[[styl]]:: S. Stylianidou, N. J. Kuwada, and P. A. Wiggins, Biophysical Journal 107,  2684 (2014).
-[[but]]:: 
-  Buterin, Vitalik. “Ethereum: A Next-Generation Smart Contract and 
-  Decentralized Application Platform.”, 2014.
-  https://github.com/ethereum/wiki/wiki/White-Paper.
+[bibliography]

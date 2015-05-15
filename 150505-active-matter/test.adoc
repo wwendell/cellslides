@@ -10,6 +10,40 @@ Wendell Smith
 :stem: latexmath
 :imagesdir: imgs
 
+== Nucleoids
+
+[cols="a,a",grid="all",frame="all"]
+|==================================
+|
+image::SCforces-cellshape.svg[scforcesshape, 100%, align="center", title="Soft Potential", caption=""]
+|
+image::SCinner-cellshape.svg[scinnershape, 100%, align="center", title="Solid Nucleoid", caption=""]
+|==================================
+
+=== Nucleoid Flow
+
+[cols="a,a",grid="none",frame="none"]
+|==================================
+|
+image::scforces6-flow.svg[scforcesflow, 100%, align="center", title="Soft Potential", caption=""]
+|
+image::scinner2-flow.svg[scinnerflow, 100%, align="center", title="Solid Nucleoid", caption=""]
+|==================================
+
+See also Ref. [cite:mandal_active_2014]
+
+== Table
+
+[grid="all",frame="all",options="header",cols="<a,^a,>a"]
+|==========================
+| Test | Test 2 | Test 3
+| More | Again  | And again
+|==========================
+
+== Test
+
+This is some text with footnote:[An example footnote.]
+
 == Test
 
 This is some text with 
