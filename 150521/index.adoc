@@ -1,4 +1,4 @@
-= The Cytoplasm and +++<br/>+++Active Matter
+= Janus Particles, Nucleoids, +++<br/>+++ and Active Matter
 Wendell Smith
 :source-highlighter: pygments
 :pygments-style: autumn
@@ -118,7 +118,7 @@ drift velocity map throughout the entire cell.
 
 === Random Kicks
 
-[options="header",cols="a,a"]
+[options="header",cols="a,a",grid="none",frame="none"]
 |============================
 | Thermostat | Metabolism
 |
@@ -137,7 +137,7 @@ drift velocity map throughout the entire cell.
 
 === Simulation
 
-[cols="^a,^a"]
+[cols="^a,^a",grid="none",frame="none"]
 |==================================
 |
 video::f62_r0.mp4[options="autoplay,loop", float=left, width=100%]
@@ -151,29 +151,37 @@ video::f62_r20.mp4[options="autoplay,loop", float=right, width=100%]
 === With Activity
 |==================================
 
-=== Considerations
+=== Experimental MSDs
 
-[horizontal]
- \(\phi\):: the packing fraction
- \(T_0\):: the thermostat temperature
- \(\gamma\):: the thermostat damping rate
- \(E_k\):: the kick magnitude
- \(f_k\):: the kick frequency
-* If \(f_k E_k \ll \gamma T_0\), then the thermostat can keep \(T \sim T_0\)
+image::parry-MSD-untreated-dnp.png["MSD of untreated vs. DNP+ cells", 80%, caption="", align=center]
 
-=== Simulation
+[discrete]
+==== A factor of \(\sim 2-10 \)
 
-image::randkicktest-MSD-f0.62-R20.svg[MSDs with Activity, 70%, title="", caption="", align=center]
+=== MSDs
 
-* \(f\) is the kick _frequency_, _T_ is the measured _temperature_
-* Kicks that are too frequent raise the temperature
+[cols="^a,^a",grid="none",frame="none"]
+|==================================
 
-=== Simulation, Larger Kicks
+| image::randkicktest-MSD-f0.60-R20-N100.svg[title="", caption="", align=center]
+| image::randkicktest-MSD-f0.62-R20-N100.svg[title="", caption="", align=center]
 
-image::randkicktest-MSD-f0.62-R200.svg[MSDs with Activity, 70%, title="", caption="", align=center]
+2+| image::randkicktest-MSD-f0.64-R20-N100.svg[title="", caption="", align=center]
+|==================================
 
-* \(f\) is the kick _frequency_, _T_ is the measured _temperature_
-* Kicks that are too frequent raise the temperature
+=== MSDs
+
+[discrete]
+==== with \(200 k_B T\) Kicks
+
+[cols="^a,^a",grid="none",frame="none"]
+|==================================
+
+| image::randkicktest-MSD-f0.60-R200-N100.svg[title="", caption="", align=center]
+| image::randkicktest-MSD-f0.62-R200-N100.svg[title="", caption="", align=center]
+
+2+| image::randkicktest-MSD-f0.64-R200-N100.svg[title="", caption="", align=center]
+|==================================
 
 == Bibliography
 
