@@ -1,0 +1,51 @@
+= A Test Document
+Wendell Smith
+:revealjs_theme: simple
+:revealjs_transition: none
+// :revealjs_width: 1280
+// :revealjs_height: 1000
+// :revealjs_margin: 0.04
+// :revealjsdir: http://wackywendell.github.io/reveal.js/
+:revealjsdir: https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/
+:stem: latexmath
+:imagesdir: imgs
+
+== Nucleoids
+
+[cols="a,a",grid="all",frame="all"]
+|==================================
+|
+image::SCforces-cellshape.svg[scforcesshape, 100%, align="center", title="Soft Potential", caption=""]
+|
+image::SCinner-cellshape.svg[scinnershape, 100%, align="center", title="Solid Nucleoid", caption=""]
+|==================================
+
+=== Nucleoid Flow
+
+[cols="a,a",grid="none",frame="none"]
+|==================================
+|
+image::scforces6-flow.svg[scforcesflow, 100%, align="center", title="Soft Potential", caption=""]
+|
+image::scinner2-flow.svg[scinnerflow, 100%, align="center", title="Solid Nucleoid", caption=""]
+|==================================
+
+See also Ref. [cite:mandal_active_2014]
+
+== Table
+
+[grid="all",frame="all",options="header",cols="<a,^a,>a"]
+|==========================
+| Test | Test 2 | Test 3
+| More | Again  | And again
+|==========================
+
+== Test
+
+This is some text with footnote:[An example footnote.]
+
+== Test
+
+This is some text with 
+
+footnoteref:[testfoot,An example footnote.]
