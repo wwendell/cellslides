@@ -13,84 +13,51 @@ Wendell Smith
 :stem: latexmath
 :imagesdir: imgs
 
-== The Cytoplasm
-
-[cols=".>a,.>a",grid="all",frame="all"]
-|==================================
-| *Active Cells* | *Inactivated Cells*:
-metabolism blocked by biochemical means |
-|==================================
-
-image::parry-MSD-untreated-dnp.png["MSD of untreated vs. DNP+ cells", 80%, caption="", align=center]
-
-[discrete]
-==== Particles in the cytoplasm diffuse much faster when the cell is metabolically active, by a factor of \(\sim 5-10 \)
-
-== Can metabolic “noise” lead to  a difference in dynamics?
-
-// [cols="7a,3a"]
-// |==================================
-// |
-* Cells are active, non-equilibrium systems
-* Chemical reactions are constantly consuming energy
-* *Do these reactions raise the effective temperature?*
-// |
-// video::f62_r0.mp4[options="autoplay,loop", width=100%, float=right]
-// |
-// |==================================
-
-
-// == Is Metabolism causing this?
-
-// [.float-group]
-// --
-// * Cells are active, non-equilibrium systems
-// * Chemical reactions are constantly consuming energy 
-
-// [.right]
-// video::f62_r0.mp4[options="autoplay,loop", width=400, float=right]
-// --
-
-== Studying Active Matter
-
-[discrete]
-==== *Active Matter* is composed of self-driven units, active particles, each capable of converting stored or ambient free energy into systematic movement [cite:marchetti_hydrodynamics_2013]
-
-* Active matter is an active field of research
-
-* Much of it is concerned with studying bird flocks, fish schools, and bacterial swarms, but occasionally considers non-living particles
-
-* Most studies use *responsive* and/or *directed* particles
-
-
 == Janus Particles
 
 image::janus-h202-traj.png[Janus Particle Trajectories, 75%, title="Janus Particle Trajectories in varying concentrations of H~2~O~2~", caption="", align=center]
 
  * *Half* of each particle is coated with platinum, which catalyzes latexmath:[2 \mathrm{H_2 O_2 \rightarrow 2 H_2 O + O_2}] on only one side
- * This reaction pushes the particles asymmetrically due to the local osmotic pressure gradient [cite:howse_2007]
-
-== Janus Particles
+ * "`The particles are being propelled by the local osmotic pressure gradient created by the asymmetric chemical reaction.`" [cite:howse_2007]
+ 
+// [quote, 'Howse']
+// The particles are being propelled by the local osmotic pressure gradient created by the asymmetric chemical reaction.
+ 
+=== Janus Particles
 
 [.float-group]
 --
 image::janus-h202-msd.png[Janus Particle MSDs, 100%, title="", caption="", align=center, float=right]
 
 * Particles in H~2~O~2~ move much farther
-
-\[
-   \begin{align*}
-   MSD(t) &= \left< \Delta \vec r^2 \right>\\
-   &= \left< \vec r(t)^2 - \vec r(0)^2 \right>
-   \end{align*}
-\]
 --
 
-== Persistent Motion
+== Nucleoid Flow
 
-* Self-propelling particles are typically modeled with "persistent motion": propulsion along some axis of the particle
-* In eukaryotic cells, molecular motors are known to cause cytoplasm "mixing"
-* This mechanism is not expected to exist in E. coli
+// cropped images created with
+// convert SCinner-cellshape.png -crop 50x100%+0+0 +repage -flop SCinner-cellshape-crop.png 
+
+[cols="^a,^a",grid="none",frame="none"]
+|==================================
+| image::SCforces6-flow.svg[Spherocylinder Flow, 100%, title="Soft Potential", caption="", align=center]
+| image::SCinner2-flow.svg[Spherocylinder Flow, 100%, title="Hard Inner Spherocylinder", caption="", align=center]
+
+| image::SCforces-cellshape-crop.png[Spherocylinder Shape, 50%, title="", caption="", align=center]
+| image::SCinner-cellshape-crop.png[Spherocylinder Shape, 50%, title="", caption="", align=center]
+|==================================
+
+=== Nucleoid Flow
+
+
+[cols="^a,^a",grid="none",frame="none"]
+|==================================
+| image::SCforces6-flow.svg[Spherocylinder Flow, 100%, title="Soft Potential", caption="", align=center]
+| image::SCinner2-flow.svg[Spherocylinder Flow, 100%, title="Hard Inner Spherocylinder", caption="", align=center]
+
+| image::SCforces-cellshape-crop.png[Spherocylinder Shape, 50%, title="", caption="", align=center]
+| image::SCinner-cellshape-crop.png[Spherocylinder Shape, 50%, title="", caption="", align=center]
+|==================================
+
 
 == Biological Considerations
 
