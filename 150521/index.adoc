@@ -13,15 +13,27 @@ Wendell Smith
 :stem: latexmath
 :imagesdir: imgs
 
-== Janus Particles
+== AGENDA
 
-image::janus-h202-traj.png[Janus Particle Trajectories, 75%, title="Janus Particle Trajectories in varying concentrations of H~2~O~2~", caption="", align=center]
+ * Janus Particle Propulsion
+ * Nucleoid Flow
+ * Activity Simulations
+
+== Janus Particle Propulsion
+
+image::janus-flow-rearranged.png[Janus Particle Flow, 60%, title="", caption="", align=center]
 
  * *Half* of each particle is coated with platinum, which catalyzes latexmath:[2 \mathrm{H_2 O_2 \rightarrow 2 H_2 O + O_2}] on only one side
  * "`The particles are being propelled by the local osmotic pressure gradient created by the asymmetric chemical reaction.`" [cite:howse_2007]
  
 // [quote, 'Howse']
 // The particles are being propelled by the local osmotic pressure gradient created by the asymmetric chemical reaction.
+
+NOTE: _Image is a modified diagram from a different paper_ [cite:feringa_molecular_2011].
+ 
+=== Janus Particles
+
+image::janus-h202-traj.png[Janus Particle Trajectories, 75%, title="Janus Particle Trajectories in varying concentrations of H~2~O~2~", caption="", align=center]
  
 === Janus Particles
 
@@ -39,6 +51,7 @@ image::janus-h202-msd.png[Janus Particle MSDs, 100%, title="", caption="", align
 
 [cols="^a,^a",grid="none",frame="none"]
 |==================================
+
 | image::SCforces6-flow.svg[Spherocylinder Flow, 100%, title="Soft Potential", caption="", align=center]
 | image::SCinner2-flow.svg[Spherocylinder Flow, 100%, title="Hard Inner Spherocylinder", caption="", align=center]
 
@@ -51,21 +64,47 @@ image::janus-h202-msd.png[Janus Particle MSDs, 100%, title="", caption="", align
 
 [cols="^a,^a",grid="none",frame="none"]
 |==================================
-| image::SCforces6-flow.svg[Spherocylinder Flow, 100%, title="Soft Potential", caption="", align=center]
+
+| image::wiggins-nucleoidexclusion-drift.png[Spherocylinder Flow, 100%, title="Soft Potential", caption="", align=center]
 | image::SCinner2-flow.svg[Spherocylinder Flow, 100%, title="Hard Inner Spherocylinder", caption="", align=center]
 
-| image::SCforces-cellshape-crop.png[Spherocylinder Shape, 50%, title="", caption="", align=center]
+| image::wiggins-nucleoidexclusion-cell.png[Spherocylinder Shape, 100%, title="", caption="", align=center]
 | image::SCinner-cellshape-crop.png[Spherocylinder Shape, 50%, title="", caption="", align=center]
 |==================================
 
+=== Nucleoid Flow
 
-== Biological Considerations
+[quote, 'Stylianidou, Kuwada, and Wiggins [cite:stylianidou_cytoplasmic_2014]']
+If we combine the predicted drift velocity maps for the nucleoid exclusion and membrane confinement
+models, we see striking agreement with the qualitative shape and quantitative scale of the observed
+drift velocity map throughout the entire cell.
+
+ * They use an entirely _passive_ model, like ours, to predict the same nucleoid flow
+
+=== Nucleoid Diffusion
+
+[cols="^2a,^3a",grid="none",frame="none"]
+|==================================
+
+| image::wiggins-diffusion-B.png[title="", caption="Fig. 4B from Wiggins"]
+
+|
+ * "`The nucleoid-exclusion model would naively predict both decreased occupancy over the nucleoid as
+ well as a decreased diffusion coefficient. Strikingly, our results show exactly the opposite
+ phenomenology: comparison between the occupancy of MS2-mRNA (Fig. 2 A) and the position
+ dependent diffusion coefficient (Fig. 4 B) reveals that *the highest diffusion coefficients are
+ observed in regions with the lowest MS2-mRNA occupancy and the highest nucleoid density.*`"
+
+|==================================
+
+== Active Matter Simulations
 
 * Metabolic activity does not significantly raise the temperature of the cell (right?)
 * ATP, the main energy source of metabolism, has energy \(E_\mathrm{ATP} \sim 20 k_B T\)
 * Metabolic activity would not have a rotational orientation
+* Individual events happen infrequently, relative to the diffusion coefficients
 
-== Simulating Metabolism
+=== Simulating Metabolism
 
 * Langevin thermostat
 \[
@@ -77,7 +116,7 @@ image::janus-h202-msd.png[Janus Particle MSDs, 100%, title="", caption="", align
 *** \(\vec \Gamma_T\) for the thermostat; balanced by \(\gamma\)
 *** \(\vec \Gamma_k\) for metabolism
 
-== Random Kicks
+=== Random Kicks
 
 [options="header",cols="a,a"]
 |============================
@@ -96,7 +135,7 @@ image::janus-h202-msd.png[Janus Particle MSDs, 100%, title="", caption="", align
 * Uniform distribution
 |============================
 
-== Simulation
+=== Simulation
 
 [cols="^a,^a"]
 |==================================
@@ -112,7 +151,7 @@ video::f62_r20.mp4[options="autoplay,loop", float=right, width=100%]
 === With Activity
 |==================================
 
-== Considerations
+=== Considerations
 
 [horizontal]
  \(\phi\):: the packing fraction
@@ -122,25 +161,19 @@ video::f62_r20.mp4[options="autoplay,loop", float=right, width=100%]
  \(f_k\):: the kick frequency
 * If \(f_k E_k \ll \gamma T_0\), then the thermostat can keep \(T \sim T_0\)
 
-== Simulation
+=== Simulation
 
 image::randkicktest-MSD-f0.62-R20.svg[MSDs with Activity, 70%, title="", caption="", align=center]
 
 * \(f\) is the kick _frequency_, _T_ is the measured _temperature_
 * Kicks that are too frequent raise the temperature
 
-== Simulation, Larger Kicks
+=== Simulation, Larger Kicks
 
 image::randkicktest-MSD-f0.62-R200.svg[MSDs with Activity, 70%, title="", caption="", align=center]
 
 * \(f\) is the kick _frequency_, _T_ is the measured _temperature_
 * Kicks that are too frequent raise the temperature
-
-== Acknowledgments
-
-* Corey O'Hern, Mark Shattuck, Christine Jacobs-Wagner
-* Brad Parry, Ivan Surovtsev, Eric Dufresne, and everyone I talked to
-* Sackler, PEB, and HHMI
 
 == Bibliography
 
