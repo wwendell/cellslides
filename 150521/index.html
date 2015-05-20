@@ -1,0 +1,167 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="author" content="Wendell Smith"><title>Janus Particles, Nucleoids, and Active Matter</title><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport"><link href="https://wackywendell.github.io/reveal.js//css/reveal.css" rel="stylesheet"><link rel="stylesheet" href="https://wackywendell.github.io/reveal.js//css/theme/simple.css" id="theme"><script type="text/x-mathjax-config">MathJax.Hub.Config({
+tex2jax: {
+  inlineMath: [["\\(", "\\)"]],
+  displayMath: [["\\[", "\\]"]],
+  ignoreClass: "nostem|nolatexmath"
+},
+asciimath2jax: {
+  delimiters: [["\\$", "\\$"]],
+  ignoreClass: "nostem|noasciimath"
+},
+TeX: { equationNumbers: { autoNumber: "none" } }
+});</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.4.0/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script><style>.listingblock .pygments .hll { background-color: #ffffcc }
+.listingblock .pygments  { background: #ffffff; }
+.listingblock .pygments .tok-c { color: #aaaaaa; font-style: italic } /* Comment */
+.listingblock .pygments .tok-err { color: #FF0000; background-color: #FFAAAA } /* Error */
+.listingblock .pygments .tok-k { color: #0000aa } /* Keyword */
+.listingblock .pygments .tok-cm { color: #aaaaaa; font-style: italic } /* Comment.Multiline */
+.listingblock .pygments .tok-cp { color: #4c8317 } /* Comment.Preproc */
+.listingblock .pygments .tok-c1 { color: #aaaaaa; font-style: italic } /* Comment.Single */
+.listingblock .pygments .tok-cs { color: #0000aa; font-style: italic } /* Comment.Special */
+.listingblock .pygments .tok-gd { color: #aa0000 } /* Generic.Deleted */
+.listingblock .pygments .tok-ge { font-style: italic } /* Generic.Emph */
+.listingblock .pygments .tok-gr { color: #aa0000 } /* Generic.Error */
+.listingblock .pygments .tok-gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.listingblock .pygments .tok-gi { color: #00aa00 } /* Generic.Inserted */
+.listingblock .pygments .tok-go { color: #888888 } /* Generic.Output */
+.listingblock .pygments .tok-gp { color: #555555 } /* Generic.Prompt */
+.listingblock .pygments .tok-gs { font-weight: bold } /* Generic.Strong */
+.listingblock .pygments .tok-gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.listingblock .pygments .tok-gt { color: #aa0000 } /* Generic.Traceback */
+.listingblock .pygments .tok-kc { color: #0000aa } /* Keyword.Constant */
+.listingblock .pygments .tok-kd { color: #0000aa } /* Keyword.Declaration */
+.listingblock .pygments .tok-kn { color: #0000aa } /* Keyword.Namespace */
+.listingblock .pygments .tok-kp { color: #0000aa } /* Keyword.Pseudo */
+.listingblock .pygments .tok-kr { color: #0000aa } /* Keyword.Reserved */
+.listingblock .pygments .tok-kt { color: #00aaaa } /* Keyword.Type */
+.listingblock .pygments .tok-m { color: #009999 } /* Literal.Number */
+.listingblock .pygments .tok-s { color: #aa5500 } /* Literal.String */
+.listingblock .pygments .tok-na { color: #1e90ff } /* Name.Attribute */
+.listingblock .pygments .tok-nb { color: #00aaaa } /* Name.Builtin */
+.listingblock .pygments .tok-nc { color: #00aa00; text-decoration: underline } /* Name.Class */
+.listingblock .pygments .tok-no { color: #aa0000 } /* Name.Constant */
+.listingblock .pygments .tok-nd { color: #888888 } /* Name.Decorator */
+.listingblock .pygments .tok-ni { color: #880000; font-weight: bold } /* Name.Entity */
+.listingblock .pygments .tok-nf { color: #00aa00 } /* Name.Function */
+.listingblock .pygments .tok-nn { color: #00aaaa; text-decoration: underline } /* Name.Namespace */
+.listingblock .pygments .tok-nt { color: #1e90ff; font-weight: bold } /* Name.Tag */
+.listingblock .pygments .tok-nv { color: #aa0000 } /* Name.Variable */
+.listingblock .pygments .tok-ow { color: #0000aa } /* Operator.Word */
+.listingblock .pygments .tok-w { color: #bbbbbb } /* Text.Whitespace */
+.listingblock .pygments .tok-mb { color: #009999 } /* Literal.Number.Bin */
+.listingblock .pygments .tok-mf { color: #009999 } /* Literal.Number.Float */
+.listingblock .pygments .tok-mh { color: #009999 } /* Literal.Number.Hex */
+.listingblock .pygments .tok-mi { color: #009999 } /* Literal.Number.Integer */
+.listingblock .pygments .tok-mo { color: #009999 } /* Literal.Number.Oct */
+.listingblock .pygments .tok-sb { color: #aa5500 } /* Literal.String.Backtick */
+.listingblock .pygments .tok-sc { color: #aa5500 } /* Literal.String.Char */
+.listingblock .pygments .tok-sd { color: #aa5500 } /* Literal.String.Doc */
+.listingblock .pygments .tok-s2 { color: #aa5500 } /* Literal.String.Double */
+.listingblock .pygments .tok-se { color: #aa5500 } /* Literal.String.Escape */
+.listingblock .pygments .tok-sh { color: #aa5500 } /* Literal.String.Heredoc */
+.listingblock .pygments .tok-si { color: #aa5500 } /* Literal.String.Interpol */
+.listingblock .pygments .tok-sx { color: #aa5500 } /* Literal.String.Other */
+.listingblock .pygments .tok-sr { color: #009999 } /* Literal.String.Regex */
+.listingblock .pygments .tok-s1 { color: #aa5500 } /* Literal.String.Single */
+.listingblock .pygments .tok-ss { color: #0000aa } /* Literal.String.Symbol */
+.listingblock .pygments .tok-bp { color: #00aaaa } /* Name.Builtin.Pseudo */
+.listingblock .pygments .tok-vc { color: #aa0000 } /* Name.Variable.Class */
+.listingblock .pygments .tok-vg { color: #aa0000 } /* Name.Variable.Global */
+.listingblock .pygments .tok-vi { color: #aa0000 } /* Name.Variable.Instance */
+.listingblock .pygments .tok-il { color: #009999 } /* Literal.Number.Integer.Long */</style><link href="https://wackywendell.github.io/reveal.js//lib/css/zenburn.css" rel="stylesheet"><script type="text/javascript">document.write( '<link rel="stylesheet" href="https://wackywendell.github.io/reveal.js//css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section><h1>Janus Particles, Nucleoids, <br/> and Active Matter</h1><h4>Wendell Smith</h4></section><section id="_agenda"><h2>AGENDA</h2><div class="ulist"><ul><li><p>Janus Particle Propulsion</p></li><li><p>Nucleoid Flow</p></li><li><p>Activity Simulations</p></li></ul></div></section>
+<section><section id="_janus_particle_propulsion"><h2>Janus Particle Propulsion</h2><div class="imageblock" style="text-align: center"><div class="content"><img src="imgs/janus-flow-rearranged.png" alt="Janus Particle Flow" width="60%"></div></div><div class="ulist"><ul><li><p><strong>Half</strong> of each particle is coated with platinum, which catalyzes \(2 \mathrm{H_2 O_2 \rightarrow 2 H_2 O + O_2}\) on only one side</p></li><li><p>&#8220;The particles are being propelled by the local osmotic pressure gradient created by the asymmetric chemical reaction.&#8221; [<a href="#howse_2007">2</a>]</p></li></ul></div><div class="admonitionblock note"><table><tr><td class="icon"><div class="title">Note</div></td><td class="content"><em>Image is a modified diagram from a different paper</em> [<a href="#feringa_molecular_2011">1</a>].</td></tr></table></div></section><section id="_janus_particles"><h2>Janus Particles</h2><div class="imageblock" style="text-align: center"><div class="content"><img src="imgs/janus-h202-traj.png" alt="Janus Particle Trajectories" width="75%"></div><div class="title">Janus Particle Trajectories in varying concentrations of H<sub>2</sub>O<sub>2</sub></div></div></section><section id="_janus_particles_2"><h2>Janus Particles</h2><div class="openblock float-group"><div class="content"><div class="imageblock" style="text-align: center; float: right"><div class="content"><img src="imgs/janus-h202-msd.png" alt="Janus Particle MSDs" width="100%"></div></div>
+<div class="ulist"><ul><li><p>Particles in H<sub>2</sub>O<sub>2</sub> move much farther</p></li></ul></div></div></div></section></section>
+<section><section id="_nucleoid_flow"><h2>Nucleoid Flow</h2><table class="tableblock frame-none grid-none" style="width:100%"><colgroup><col style="width:50%"><col style="width:50%"></colgroup><tbody><tr><td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center"><div class="content"><img src="imgs/SCforces6-flow.svg" alt="Spherocylinder Flow" width="100%"></div><div class="title">Soft Potential</div></div></div></td><td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center"><div class="content"><img src="imgs/SCinner2-flow.svg" alt="Spherocylinder Flow" width="100%"></div><div class="title">Hard Inner Spherocylinder</div></div></div></td></tr><tr><td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center"><div class="content"><img src="imgs/SCforces-cellshape-crop.png" alt="Spherocylinder Shape" width="50%"></div></div></div></td><td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center"><div class="content"><img src="imgs/SCinner-cellshape-crop.png" alt="Spherocylinder Shape" width="50%"></div></div></div></td></tr></tbody></table></section><section id="_nucleoid_flow_2"><h2>Nucleoid Flow</h2><table class="tableblock frame-none grid-none" style="width:100%"><colgroup><col style="width:50%"><col style="width:50%"></colgroup><tbody><tr><td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center"><div class="content"><img src="imgs/wiggins-nucleoidexclusion-drift.png" alt="Spherocylinder Flow" width="100%"></div><div class="title">Soft Potential</div></div></div></td><td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center"><div class="content"><img src="imgs/SCinner2-flow.svg" alt="Spherocylinder Flow" width="100%"></div><div class="title">Hard Inner Spherocylinder</div></div></div></td></tr><tr><td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center"><div class="content"><img src="imgs/wiggins-nucleoidexclusion-cell.png" alt="Spherocylinder Shape" width="100%"></div></div></div></td><td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center"><div class="content"><img src="imgs/SCinner-cellshape-crop.png" alt="Spherocylinder Shape" width="50%"></div></div></div></td></tr></tbody></table></section><section id="_nucleoid_flow_3"><h2>Nucleoid Flow</h2><div class="quoteblock"><blockquote>If we combine the predicted drift velocity maps for the nucleoid exclusion and membrane confinement
+models, we see striking agreement with the qualitative shape and quantitative scale of the observed
+drift velocity map throughout the entire cell.</blockquote><div class="attribution">&#8212; Stylianidou, Kuwada, and Wiggins [<a href="#stylianidou_cytoplasmic_2014">3</a>]</div></div>
+<div class="ulist"><ul><li><p>They use an entirely <em>passive</em> model, like ours, to predict the same nucleoid flow</p></li></ul></div></section><section id="_nucleoid_diffusion"><h2>Nucleoid Diffusion</h2><table class="tableblock frame-none grid-none" style="width:100%"><colgroup><col style="width:40%"><col style="width:60%"></colgroup><tbody><tr><td class="tableblock halign-center valign-top"><div><div class="imageblock" style=""><div class="content"><img src="imgs/wiggins-diffusion-B.png" alt="wiggins diffusion B"></div></div></div></td><td class="tableblock halign-center valign-top"><div><div class="ulist"><ul><li><p>&#8220;The nucleoid-exclusion model would naively predict both decreased occupancy over the nucleoid as
+well as a decreased diffusion coefficient. Strikingly, our results show exactly the opposite
+phenomenology: comparison between the occupancy of MS2-mRNA (Fig. 2 A) and the position
+dependent diffusion coefficient (Fig. 4 B) reveals that <strong>the highest diffusion coefficients are
+observed in regions with the lowest MS2-mRNA occupancy and the highest nucleoid density.</strong>&#8221;</p></li></ul></div></div></td></tr></tbody></table></section></section>
+<section><section id="_active_matter_simulations"><h2>Active Matter Simulations</h2><div class="ulist"><ul><li><p>Metabolic activity does not significantly raise the temperature of the cell (right?)</p></li><li><p>ATP, the main energy source of metabolism, has energy \(E_\mathrm{ATP} \sim 20 k_B T\)</p></li><li><p>Metabolic activity would not have a rotational orientation</p></li><li><p>Individual events happen infrequently, relative to the diffusion coefficients</p></li></ul></div></section><section id="_simulating_metabolism"><h2>Simulating Metabolism</h2><div class="ulist"><ul><li><p>Langevin thermostat
+\[
+    \vec F = -\vec \nabla U - \gamma \vec v + \vec \Gamma_T + \vec \Gamma_k\left(t\right)
+\]</p><div class="ulist"><ul><li><p>WCA potential / repulsive Lennard-Jones for \(U\)</p></li><li><p>Damping \(\gamma\) to simulate solution viscosity</p></li><li><p>Random, instantaneous "kicks" to the particles</p><div class="ulist"><ul><li><p>\(\vec \Gamma_T\) for the thermostat; balanced by \(\gamma\)</p></li><li><p>\(\vec \Gamma_k\) for metabolism</p></li></ul></div></li></ul></div></li></ul></div></section><section id="_random_kicks"><h2>Random Kicks</h2><table class="tableblock frame-none grid-none" style="width:100%"><colgroup><col style="width:50%"><col style="width:50%"></colgroup><thead><tr><th class="tableblock halign-left valign-top">Thermostat</th><th class="tableblock halign-left valign-top">Metabolism</th></tr></thead><tbody><tr><td class="tableblock halign-left valign-top"><div><div class="ulist"><ul><li><p>\(\Gamma_T \sim \Delta t k_B T \sim {10}^{-5} k_B T\)</p></li><li><p>Every timestep</p></li><li><p>Correlated: satisfy FDT</p></li><li><p>Gaussian distribution</p></li><li><p>Balanced by \(-\gamma \vec v\)</p></li></ul></div></div></td><td class="tableblock halign-left valign-top"><div><div class="ulist"><ul><li><p>\(0 \le E_k \le 20 k_B T\)</p></li><li><p>Instantaneous</p></li><li><p>Infrequent, ~100—1000 timesteps</p></li><li><p>Uncorrelated</p></li><li><p>Uniform distribution</p></li></ul></div></div></td></tr></tbody></table></section><section id="_simulation"><h2>Simulation</h2><table class="tableblock frame-none grid-none" style="width:100%"><colgroup><col style="width:50%"><col style="width:50%"></colgroup><tbody><tr><td class="tableblock halign-center valign-top"><div><div class="videoblock"><div class="content"><video src="imgs/f62_r0.mp4" width="100%" autoplay controls loop>Your browser does not support the video tag.</video></div></div>
+<h3 id="_without_activity" class="discrete">Without Activity</h3></div></td><td class="tableblock halign-center valign-top"><div><div class="videoblock"><div class="content"><video src="imgs/f62_r20.mp4" width="100%" autoplay controls loop>Your browser does not support the video tag.</video></div></div>
+<h3 id="_with_activity" class="discrete">With Activity</h3></div></td></tr></tbody></table></section><section id="_experimental_msds"><h2>Experimental MSDs</h2><div class="imageblock" style="text-align: center"><div class="content"><img src="imgs/parry-MSD-untreated-dnp.png" alt="MSD of untreated vs. DNP+ cells" width="80%"></div></div>
+<h4 id="_a_factor_of_sim_2_10" class="discrete">A factor of \(\sim 2-10 \)</h4></section><section id="_msds"><h2>MSDs</h2><table class="tableblock frame-none grid-none" style="width:100%"><colgroup><col style="width:50%"><col style="width:50%"></colgroup><tbody><tr><td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center"><div class="content"><img src="imgs/randkicktest-MSD-f0.60-R20-N100.svg" alt="randkicktest MSD f0.60 R20 N100"></div></div></div></td><td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center"><div class="content"><img src="imgs/randkicktest-MSD-f0.62-R20-N100.svg" alt="randkicktest MSD f0.62 R20 N100"></div></div></div></td></tr><tr><td class="tableblock halign-center valign-top" colspan="2"><div><div class="imageblock" style="text-align: center"><div class="content"><img src="imgs/randkicktest-MSD-f0.64-R20-N100.svg" alt="randkicktest MSD f0.64 R20 N100"></div></div></div></td></tr></tbody></table></section><section id="_msds_2"><h2>MSDs</h2><h4 id="_with_200_k_b_t_kicks" class="discrete">with \(200 k_B T\) Kicks</h4>
+<table class="tableblock frame-none grid-none" style="width:100%"><colgroup><col style="width:50%"><col style="width:50%"></colgroup><tbody><tr><td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center"><div class="content"><img src="imgs/randkicktest-MSD-f0.60-R200-N100.svg" alt="randkicktest MSD f0.60 R200 N100"></div></div></div></td><td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center"><div class="content"><img src="imgs/randkicktest-MSD-f0.62-R200-N100.svg" alt="randkicktest MSD f0.62 R200 N100"></div></div></div></td></tr><tr><td class="tableblock halign-center valign-top" colspan="2"><div><div class="imageblock" style="text-align: center"><div class="content"><img src="imgs/randkicktest-MSD-f0.64-R200-N100.svg" alt="randkicktest MSD f0.64 R200 N100"></div></div></div></td></tr></tbody></table></section></section>
+<section id="_bibliography"><h2>Bibliography</h2><div class="olist arabic"><ol class="arabic"><li><p><a id="feringa_molecular_2011"></a>B. Feringa, Nat Chem <strong>3</strong>, 915 (2011).</p></li><li><p><a id="howse_2007"></a>J. R. Howse, R. A. L. Jones, A. J. Ryan, T. Gough, R. Vafabakhsh, and R. Golestanian, Phys. Rev. Lett. <strong>99</strong>, 048102 (2007).</p></li><li><p><a id="stylianidou_cytoplasmic_2014"></a>S. Stylianidou, N. J. Kuwada, and P. A. Wiggins, Biophysical Journal <strong>107</strong>, 2684 (2014).</p></li></ol></div></section></div></div><script src="https://wackywendell.github.io/reveal.js//lib/js/head.min.js"></script><script src="https://wackywendell.github.io/reveal.js//js/reveal.js"></script><script type="text/javascript">// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+Reveal.initialize({
+  // Display controls in the bottom right corner
+  controls: true,
+  // Display a presentation progress bar
+  progress: true,
+  // Display the page number of the current slide
+  slideNumber: false,
+  // Push each slide change to the browser history
+  history: false,
+  // Enable keyboard shortcuts for navigation
+  keyboard: true,
+  // Enable the slide overview mode
+  overview: true,
+  // Vertical centering of slides
+  center: true,
+  // Enables touch navigation on devices with touch input
+  touch: true,
+  // Loop the presentation
+  loop: false,
+  // Change the presentation direction to be RTL
+  rtl: false,
+  // Turns fragments on and off globally
+  fragments: true,
+  // Flags if the presentation is running in an embedded mode,
+  // i.e. contained within a limited portion of the screen
+  embedded: false,
+  // Number of milliseconds between automatically proceeding to the
+  // next slide, disabled when set to 0, this value can be overwritten
+  // by using a data-autoslide attribute on your slides
+  autoSlide: 0,
+  // Stop auto-sliding after user input
+  autoSlideStoppable: true,
+  // Enable slide navigation via mouse wheel
+  mouseWheel: false,
+  // Hides the address bar on mobile devices
+  hideAddressBar: true,
+  // Opens links in an iframe preview overlay
+  previewLinks: false,
+  // Theme (e.g., beige, black, blood, league, moon, night, serif, simple, sky, solarized, white)
+  // NOTE setting the theme in the config no longer works in reveal.js 3.x
+  //theme: Reveal.getQueryHash().theme || 'simple',
+  // Transition style (e.g., none, fade, slide, convex, concave, zoom)
+  transition: Reveal.getQueryHash().transition || 'none',
+  // Transition speed (e.g., default, fast, slow)
+  transitionSpeed: 'default',
+  // Transition style for full page slide backgrounds (e.g., none, fade, slide, convex, concave, zoom)
+  backgroundTransition: 'fade',
+  // Number of slides away from the current that are visible
+  viewDistance: 3,
+  // Parallax background image (e.g., "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'")
+  parallaxBackgroundImage: '',
+  // Parallax background size in CSS syntax (e.g., "2100px 900px")
+  parallaxBackgroundSize: '',
+
+  // The "normal" size of the presentation, aspect ratio will be preserved
+  // when the presentation is scaled to fit different resolutions. Can be
+  // specified using percentage units.
+  width: 1280,
+  height: 960,
+
+  // Factor of the display size that should remain empty around the content
+  margin: 0.04,
+
+  // Bounds for smallest/largest possible scale to apply to content
+  minScale: 0.2,
+  maxScale: 1.5,
+
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+      { src: 'https://wackywendell.github.io/reveal.js//lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'https://wackywendell.github.io/reveal.js//plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'https://wackywendell.github.io/reveal.js//plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      
+      { src: 'https://wackywendell.github.io/reveal.js//plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: 'https://wackywendell.github.io/reveal.js//plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]
+});</script></body></html>
