@@ -1,0 +1,188 @@
+= Janus Particles, Nucleoids, +++<br/>+++ and Active Matter
+Wendell Smith
+:source-highlighter: pygments
+:pygments-style: autumn
+:revealjs_theme: simple
+:revealjs_transition: none
+:revealjs_width: 1280
+:revealjs_height: 960
+:revealjs_margin: 0.04
+:revealjs_history: false
+:revealjsdir: https://wackywendell.github.io/reveal.js/
+// :revealjsdir: https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/
+:stem: latexmath
+:imagesdir: imgs
+
+== AGENDA
+
+ * Janus Particle Propulsion
+ * Nucleoid Flow
+ * Activity Simulations
+
+== Janus Particle Propulsion
+
+image::janus-flow-rearranged.png[Janus Particle Flow, 60%, title="", caption="", align=center]
+
+ * *Half* of each particle is coated with platinum, which catalyzes latexmath:[2 \mathrm{H_2 O_2 \rightarrow 2 H_2 O + O_2}] on only one side
+ * "`The particles are being propelled by the local osmotic pressure gradient created by the asymmetric chemical reaction.`" [cite:howse_2007]
+ 
+// [quote, 'Howse']
+// The particles are being propelled by the local osmotic pressure gradient created by the asymmetric chemical reaction.
+
+NOTE: _Image is a modified diagram from a different paper_ [cite:feringa_molecular_2011].
+ 
+=== Janus Particles
+
+image::janus-h202-traj.png[Janus Particle Trajectories, 75%, title="Janus Particle Trajectories in varying concentrations of H~2~O~2~", caption="", align=center]
+ 
+=== Janus Particles
+
+[.float-group]
+--
+image::janus-h202-msd.png[Janus Particle MSDs, 100%, title="", caption="", align=center, float=right]
+
+* Particles in H~2~O~2~ move much farther
+--
+
+== Nucleoid Flow
+
+// cropped images created with
+// convert SCinner-cellshape.png -crop 50x100%+0+0 +repage -flop SCinner-cellshape-crop.png 
+
+[cols="^a,^a",grid="none",frame="none"]
+|==================================
+
+| image::SCforces6-flow.svg[Spherocylinder Flow, 100%, title="Soft Potential", caption="", align=center]
+| image::SCinner2-flow.svg[Spherocylinder Flow, 100%, title="Hard Inner Spherocylinder", caption="", align=center]
+
+| image::SCforces-cellshape-crop.png[Spherocylinder Shape, 50%, title="", caption="", align=center]
+| image::SCinner-cellshape-crop.png[Spherocylinder Shape, 50%, title="", caption="", align=center]
+|==================================
+
+=== Nucleoid Flow
+
+
+[cols="^a,^a",grid="none",frame="none"]
+|==================================
+
+| image::wiggins-nucleoidexclusion-drift.png[Spherocylinder Flow, 100%, title="Soft Potential", caption="", align=center]
+| image::SCinner2-flow.svg[Spherocylinder Flow, 100%, title="Hard Inner Spherocylinder", caption="", align=center]
+
+| image::wiggins-nucleoidexclusion-cell.png[Spherocylinder Shape, 100%, title="", caption="", align=center]
+| image::SCinner-cellshape-crop.png[Spherocylinder Shape, 50%, title="", caption="", align=center]
+|==================================
+
+=== Nucleoid Flow
+
+[quote, 'Stylianidou, Kuwada, and Wiggins [cite:stylianidou_cytoplasmic_2014]']
+If we combine the predicted drift velocity maps for the nucleoid exclusion and membrane confinement
+models, we see striking agreement with the qualitative shape and quantitative scale of the observed
+drift velocity map throughout the entire cell.
+
+ * They use an entirely _passive_ model, like ours, to predict the same nucleoid flow
+
+=== Nucleoid Diffusion
+
+[cols="^2a,^3a",grid="none",frame="none"]
+|==================================
+
+| image::wiggins-diffusion-B.png[title="", caption="Fig. 4B from Wiggins"]
+
+|
+ * "`The nucleoid-exclusion model would naively predict both decreased occupancy over the nucleoid as
+ well as a decreased diffusion coefficient. Strikingly, our results show exactly the opposite
+ phenomenology: comparison between the occupancy of MS2-mRNA (Fig. 2 A) and the position
+ dependent diffusion coefficient (Fig. 4 B) reveals that *the highest diffusion coefficients are
+ observed in regions with the lowest MS2-mRNA occupancy and the highest nucleoid density.*`"
+
+|==================================
+
+== Active Matter Simulations
+
+* Metabolic activity does not significantly raise the temperature of the cell (right?)
+* ATP, the main energy source of metabolism, has energy \(E_\mathrm{ATP} \sim 20 k_B T\)
+* Metabolic activity would not have a rotational orientation
+* Individual events happen infrequently, relative to the diffusion coefficients
+
+=== Simulating Metabolism
+
+* Langevin thermostat
+\[
+    \vec F = -\vec \nabla U - \gamma \vec v + \vec \Gamma_T + \vec \Gamma_k\left(t\right)
+\]
+** WCA potential / repulsive Lennard-Jones for \(U\)
+** Damping \(\gamma\) to simulate solution viscosity
+** Random, instantaneous "kicks" to the particles
+*** \(\vec \Gamma_T\) for the thermostat; balanced by \(\gamma\)
+*** \(\vec \Gamma_k\) for metabolism
+
+=== Random Kicks
+
+[options="header",cols="a,a",grid="none",frame="none"]
+|============================
+| Thermostat | Metabolism
+|
+* \(\Gamma_T \sim \Delta t k_B T \sim {10}^{-5} k_B T\)
+* Every timestep
+* Correlated: satisfy FDT
+* Gaussian distribution
+* Balanced by \(-\gamma \vec v\)
+|
+* \(0 \le E_k \le 20 k_B T\)
+* Instantaneous
+* Infrequent, ~100—1000 timesteps
+* Uncorrelated
+* Uniform distribution
+|============================
+
+=== Simulation
+
+[cols="^a,^a",grid="none",frame="none"]
+|==================================
+|
+video::f62_r0.mp4[options="autoplay,loop", float=left, width=100%]
+
+[discrete]
+=== Without Activity
+|
+video::f62_r20.mp4[options="autoplay,loop", float=right, width=100%]
+
+[discrete]
+=== With Activity
+|==================================
+
+=== Experimental MSDs
+
+image::parry-MSD-untreated-dnp.png["MSD of untreated vs. DNP+ cells", 80%, caption="", align=center]
+
+[discrete]
+==== A factor of \(\sim 2-10 \)
+
+=== MSDs
+
+[cols="^a,^a",grid="none",frame="none"]
+|==================================
+
+| image::randkicktest-MSD-f0.60-R20-N100.svg[title="", caption="", align=center]
+| image::randkicktest-MSD-f0.62-R20-N100.svg[title="", caption="", align=center]
+
+2+| image::randkicktest-MSD-f0.64-R20-N100.svg[title="", caption="", align=center]
+|==================================
+
+=== MSDs
+
+[discrete]
+==== with \(200 k_B T\) Kicks
+
+[cols="^a,^a",grid="none",frame="none"]
+|==================================
+
+| image::randkicktest-MSD-f0.60-R200-N100.svg[title="", caption="", align=center]
+| image::randkicktest-MSD-f0.62-R200-N100.svg[title="", caption="", align=center]
+
+2+| image::randkicktest-MSD-f0.64-R200-N100.svg[title="", caption="", align=center]
+|==================================
+
+== Bibliography
+
+[bibliography]
