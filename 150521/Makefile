@@ -1,4 +1,4 @@
-all: index.html index2.html
+all: index2.html index.html
 
 index.html: index-ref.adoc
 	asciidoctor -T ~/code/ascreveal/templates/slim index-ref.adoc -o index.html
