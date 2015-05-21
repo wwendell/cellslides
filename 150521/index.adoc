@@ -230,7 +230,7 @@ image::parry-MSD-untreated-dnp.png["MSD of untreated vs. DNP+ cells", 80%, capti
 2+| image::randkicktest-MSD-f0.64-R200-N100.svg[title="", caption="", align=center]
 |==================================
 
-== MSD Comparison
+=== MSD Comparison
 
 
 [cols="^a,^a",grid="none",frame="none"]
