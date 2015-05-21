@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.2">
 <meta name="author" content="Wendell Smith">
-<title>Janus Particles, Nucleoids, and Active Matter</title>
+<title>Nucleoids, Janus Particles, and Active Matter</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -489,32 +489,282 @@ MathJax.Hub.Config({
 </head>
 <body class="article">
 <div id="header">
-<h1>Janus Particles, Nucleoids, <br/> and Active Matter</h1>
+<h1>Nucleoids, Janus Particles, <br/> and Active Matter</h1>
 <div class="details">
 <span id="author" class="author">Wendell Smith</span><br>
+</div>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_topics">Topics</a></li>
+<li><a href="#_flow_through_the_nucleoid_2">Flow through the Nucleoid</a>
+<ul class="sectlevel2">
+<li><a href="#_flow_through_the_nucleoid_3">Flow through the Nucleoid</a></li>
+<li><a href="#_passive_model">Passive Model</a></li>
+<li><a href="#_position_dependent_diffusion_constant">Position Dependent Diffusion Constant</a></li>
+<li><a href="#_position_dependent_diffusion_constant_2">Position Dependent Diffusion Constant</a></li>
+<li><a href="#_step_size_distribution">Step Size Distribution</a></li>
+</ul>
+</li>
+<li><a href="#_janus_particle_propulsion_2">Janus Particle Propulsion</a>
+<ul class="sectlevel2">
+<li><a href="#_janus_particles">Janus Particles</a></li>
+<li><a href="#_janus_particles_2">Janus Particles</a></li>
+</ul>
+</li>
+<li><a href="#_active_particle_simulations_2">Active Particle Simulations</a>
+<ul class="sectlevel2">
+<li><a href="#_simulating_metabolism">Simulating Metabolism</a></li>
+<li><a href="#_random_kicks">Random Kicks</a></li>
+<li><a href="#_simulation">Simulation</a></li>
+<li><a href="#_experimental_msds">Experimental MSDs</a></li>
+<li><a href="#_msds">MSDs</a></li>
+<li><a href="#_msds_2">MSDs</a></li>
+</ul>
+</li>
+<li><a href="#_msd_comparison">MSD Comparison</a></li>
+<li><a href="#_bibliography">Bibliography</a></li>
+</ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_agenda">AGENDA</h2>
+<h2 id="_topics">Topics</h2>
 <div class="sectionbody">
+<h3 id="_flow_through_the_nucleoid" class="discrete">Flow through the Nucleoid</h3>
+<h3 id="_janus_particle_propulsion" class="discrete">Janus Particle Propulsion</h3>
+<h3 id="_active_particle_simulations" class="discrete">Active Particle Simulations</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_flow_through_the_nucleoid_2">Flow through the Nucleoid</h2>
+<div class="sectionbody">
+<table class="tableblock frame-none grid-none spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">Hard Inner Spherocylinder</th>
+<th class="tableblock halign-center valign-top">Soft Potential</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="imgs/SCinner2-flow.svg" alt="Spherocylinder Flow" width="100%">
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="imgs/SCforces6-flow.svg" alt="Spherocylinder Flow" width="100%">
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="imgs/SCinner-cellshape-crop.png" alt="Spherocylinder Shape" width="55%">
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="imgs/SCforces-cellshape-crop.png" alt="Spherocylinder Shape" width="55%">
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="_flow_through_the_nucleoid_3">Flow through the Nucleoid</h3>
+<table class="tableblock frame-none grid-none spread">
+<colgroup>
+<col style="width: 55%;">
+<col style="width: 45%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">Wiggins</th>
+<th class="tableblock halign-center valign-top">Soft Potential</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="imgs/wiggins-nucleoidexclusion-drift.png" alt="Spherocylinder Flow" width="100%">
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="imgs/SCforces6-flow.svg" alt="Spherocylinder Flow" width="100%">
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="imgs/wiggins-nucleoidexclusion-cell.png" alt="Spherocylinder Shape" width="100%">
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="imgs/SCforces-cellshape-crop.png" alt="Spherocylinder Shape" width="65%">
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_passive_model">Passive Model</h3>
+<div class="quoteblock">
+<blockquote>
+If we combine the predicted drift velocity maps for the nucleoid exclusion and membrane confinement
+models, we see striking agreement with the qualitative shape and quantitative scale of the observed
+drift velocity map throughout the entire cell.
+</blockquote>
+<div class="attribution">
+&#8212; Stylianidou, Kuwada, and Wiggins [<a href="#stylianidou_cytoplasmic_2014">3</a>]
+</div>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Janus Particle Propulsion</p>
-</li>
-<li>
-<p>Nucleoid Flow</p>
-</li>
-<li>
-<p>Activity Simulations</p>
+<p>They use an entirely <em>passive</em> model, like ours, to predict the same nucleoid flow</p>
 </li>
 </ul>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_position_dependent_diffusion_constant">Position Dependent Diffusion Constant</h3>
+<table class="tableblock frame-none grid-none spread">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><div><div class="imageblock">
+<div class="content">
+<img src="imgs/wiggins-diffusion-B.png" alt="wiggins diffusion B">
+</div>
+<div class="title">Fig. 4B from Wiggins</div>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div><div class="ulist">
+<ul>
+<li>
+<p>&#8220;The nucleoid-exclusion model would naively predict both decreased occupancy over the nucleoid as
+well as a decreased diffusion coefficient. Strikingly, our results show exactly the opposite
+phenomenology: comparison between the occupancy of MS2-mRNA (Fig. 2 A) and the position
+dependent diffusion coefficient (Fig. 4 B) reveals that <strong>the highest diffusion coefficients are
+observed in regions with the lowest MS2-mRNA occupancy and the highest nucleoid density.</strong>&#8221;</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_position_dependent_diffusion_constant_2">Position Dependent Diffusion Constant</h3>
+<table class="tableblock frame-none grid-none spread">
+<colgroup>
+<col style="width: 52%;">
+<col style="width: 48%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-bottom">Fig. 4B from Wiggins</th>
+<th class="tableblock halign-center valign-bottom">Soft Potential</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-bottom"><div><div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="imgs/wiggins-diffusion-B.png" alt="" width="75%">
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-bottom"><div><div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="imgs/SCforces6-diffusion.svg" alt="" width="75%">
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="imgs/wiggins-nucleoidexclusion-cell.png" alt="Spherocylinder Shape" width="60%">
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="imgs/SCforces-cellshape-crop.png" alt="Spherocylinder Shape" width="35%">
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-bottom"><div></div></td>
+<td class="tableblock halign-left valign-bottom"><div><div class="paragraph">
+<p>Diffusion constant calculated from</p>
+</div>
+<div class="paragraph">
+<p>\[
+    D \sim \frac{\left&lt; \Delta x^2 \right&gt;}{\Delta t}
+\]</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_step_size_distribution">Step Size Distribution</h3>
+<table class="tableblock frame-none grid-none spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-bottom">Wiggins</th>
+<th class="tableblock halign-center valign-bottom">Soft Potential</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-bottom"><div><div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="imgs/wiggins-expsteps.png" alt="" width="100%">
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-bottom"><div><div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="imgs/SCforces6-dxdistrib.svg" alt="" width="100%">
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-bottom"><div><div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="imgs/wiggins-nucleoidexclusion-cell.png" alt="Spherocylinder Shape" width="100%">
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-bottom"><div><div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="imgs/SCforces-cellshape-crop.png" alt="Spherocylinder Shape" width="50%">
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div class="sect1">
-<h2 id="_janus_particle_propulsion">Janus Particle Propulsion</h2>
+<h2 id="_janus_particle_propulsion_2">Janus Particle Propulsion</h2>
 <div class="sectionbody">
 <div class="imageblock" style="text-align: center">
 <div class="content">
@@ -574,132 +824,7 @@ MathJax.Hub.Config({
 </div>
 </div>
 <div class="sect1">
-<h2 id="_nucleoid_flow">Nucleoid Flow</h2>
-<div class="sectionbody">
-<table class="tableblock frame-none grid-none spread">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="imgs/SCforces6-flow.svg" alt="Spherocylinder Flow" width="100%">
-</div>
-<div class="title">Soft Potential</div>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="imgs/SCinner2-flow.svg" alt="Spherocylinder Flow" width="100%">
-</div>
-<div class="title">Hard Inner Spherocylinder</div>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="imgs/SCforces-cellshape-crop.png" alt="Spherocylinder Shape" width="50%">
-</div>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="imgs/SCinner-cellshape-crop.png" alt="Spherocylinder Shape" width="50%">
-</div>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-<div class="sect2">
-<h3 id="_nucleoid_flow_2">Nucleoid Flow</h3>
-<table class="tableblock frame-none grid-none spread">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="imgs/wiggins-nucleoidexclusion-drift.png" alt="Spherocylinder Flow" width="100%">
-</div>
-<div class="title">Soft Potential</div>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="imgs/SCinner2-flow.svg" alt="Spherocylinder Flow" width="100%">
-</div>
-<div class="title">Hard Inner Spherocylinder</div>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="imgs/wiggins-nucleoidexclusion-cell.png" alt="Spherocylinder Shape" width="100%">
-</div>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="imgs/SCinner-cellshape-crop.png" alt="Spherocylinder Shape" width="50%">
-</div>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect2">
-<h3 id="_nucleoid_flow_3">Nucleoid Flow</h3>
-<div class="quoteblock">
-<blockquote>
-If we combine the predicted drift velocity maps for the nucleoid exclusion and membrane confinement
-models, we see striking agreement with the qualitative shape and quantitative scale of the observed
-drift velocity map throughout the entire cell.
-</blockquote>
-<div class="attribution">
-&#8212; Stylianidou, Kuwada, and Wiggins [<a href="#stylianidou_cytoplasmic_2014">3</a>]
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>They use an entirely <em>passive</em> model, like ours, to predict the same nucleoid flow</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_nucleoid_diffusion">Nucleoid Diffusion</h3>
-<table class="tableblock frame-none grid-none spread">
-<colgroup>
-<col style="width: 40%;">
-<col style="width: 60%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top"><div><div class="imageblock">
-<div class="content">
-<img src="imgs/wiggins-diffusion-B.png" alt="wiggins diffusion B">
-</div>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div><div class="ulist">
-<ul>
-<li>
-<p>&#8220;The nucleoid-exclusion model would naively predict both decreased occupancy over the nucleoid as
-well as a decreased diffusion coefficient. Strikingly, our results show exactly the opposite
-phenomenology: comparison between the occupancy of MS2-mRNA (Fig. 2 A) and the position
-dependent diffusion coefficient (Fig. 4 B) reveals that <strong>the highest diffusion coefficients are
-observed in regions with the lowest MS2-mRNA occupancy and the highest nucleoid density.</strong>&#8221;</p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_active_matter_simulations">Active Matter Simulations</h2>
+<h2 id="_active_particle_simulations_2">Active Particle Simulations</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -735,14 +860,14 @@ observed in regions with the lowest MS2-mRNA occupancy and the highest nucleoid 
 <p>Damping \(\gamma\) to simulate solution viscosity</p>
 </li>
 <li>
-<p>Random, instantaneous "kicks" to the particles</p>
+<p><strong>Random, instantaneous "kicks"</strong> to the particles</p>
 <div class="ulist">
 <ul>
 <li>
-<p>\(\vec \Gamma_T\) for the thermostat; balanced by \(\gamma\)</p>
+<p>\(\vec \Gamma_T\) <strong>for the thermostat</strong>; balanced by \(\gamma\), the drag force</p>
 </li>
 <li>
-<p>\(\vec \Gamma_k\) for metabolism</p>
+<p>\(\vec \Gamma_k\) <strong>for metabolism</strong></p>
 </li>
 </ul>
 </div>
@@ -777,13 +902,20 @@ observed in regions with the lowest MS2-mRNA occupancy and the highest nucleoid 
 <p>Every timestep</p>
 </li>
 <li>
-<p>Correlated: satisfy FDT</p>
+<p>Mimic "bumping into water molecules"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Correlated: satisfy Fluctuation-Dissipation Theorem</p>
 </li>
 <li>
 <p>Gaussian distribution</p>
 </li>
 <li>
-<p>Balanced by \(-\gamma \vec v\)</p>
+<p>Balanced by the drag force \(-\gamma \vec v\)</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div></div></td>
@@ -850,6 +982,7 @@ Your browser does not support the video tag.
 </div>
 <div class="sect2">
 <h3 id="_msds">MSDs</h3>
+<h4 id="_with_20_k_b_t_kicks" class="discrete">with \(20 k_B T\) Kicks</h4>
 <table class="tableblock frame-none grid-none spread">
 <colgroup>
 <col style="width: 50%;">
@@ -912,6 +1045,38 @@ Your browser does not support the video tag.
 </div>
 </div>
 <div class="sect1">
+<h2 id="_msd_comparison">MSD Comparison</h2>
+<div class="sectionbody">
+<table class="tableblock frame-none grid-none spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="imgs/randkicktest-MSD-f0.60-R20-N100.svg" alt="randkicktest MSD f0.60 R20 N100">
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="imgs/randkicktest-MSD-f0.62-R20-N100.svg" alt="randkicktest MSD f0.62 R20 N100">
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" colspan="2"><div><div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="imgs/parry-MSD-untreated-dnp.png" alt="MSD of untreated vs. DNP+ cells" width="80%">
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_bibliography">Bibliography</h2>
 <div class="sectionbody">
 <div class="olist arabic">
@@ -932,7 +1097,7 @@ Your browser does not support the video tag.
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-05-20 16:33:04 EDT
+Last updated 2015-05-21 13:49:48 EDT
 </div>
 </div>
 </body>
