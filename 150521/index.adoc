@@ -13,10 +13,10 @@ Wendell Smith
 :stem: latexmath
 :imagesdir: imgs
 
-== AGENDA
+== Topics
 
  * Janus Particle Propulsion
- * Nucleoid Flow
+ * Flow through the Nucleoid
  * Activity Simulations
 
 == Janus Particle Propulsion
@@ -44,7 +44,7 @@ image::janus-h202-msd.png[Janus Particle MSDs, 100%, title="", caption="", align
 * Particles in H~2~O~2~ move much farther
 --
 
-== Nucleoid Flow
+== Flow through the Nucleoid
 
 // cropped images created with
 // convert SCinner-cellshape.png -crop 50x100%+0+0 +repage -flop SCinner-cellshape-crop.png 
@@ -52,27 +52,27 @@ image::janus-h202-msd.png[Janus Particle MSDs, 100%, title="", caption="", align
 [cols="^a,^a",grid="none",frame="none"]
 |==================================
 
-| image::SCforces6-flow.svg[Spherocylinder Flow, 100%, title="Soft Potential", caption="", align=center]
 | image::SCinner2-flow.svg[Spherocylinder Flow, 100%, title="Hard Inner Spherocylinder", caption="", align=center]
+| image::SCforces6-flow.svg[Spherocylinder Flow, 100%, title="Soft Potential", caption="", align=center]
 
-| image::SCforces-cellshape-crop.png[Spherocylinder Shape, 50%, title="", caption="", align=center]
 | image::SCinner-cellshape-crop.png[Spherocylinder Shape, 50%, title="", caption="", align=center]
+| image::SCforces-cellshape-crop.png[Spherocylinder Shape, 50%, title="", caption="", align=center]
 |==================================
 
-=== Nucleoid Flow
+=== Flow through the Nucleoid
 
 
 [cols="^a,^a",grid="none",frame="none"]
 |==================================
 
-| image::wiggins-nucleoidexclusion-drift.png[Spherocylinder Flow, 100%, title="Soft Potential", caption="", align=center]
-| image::SCinner2-flow.svg[Spherocylinder Flow, 100%, title="Hard Inner Spherocylinder", caption="", align=center]
+| image::wiggins-nucleoidexclusion-drift.png[Spherocylinder Flow, 100%, title="Wiggins", caption="", align=center]
+| image::SCforces6-flow.svg[Spherocylinder Flow, 100%, title="Soft Potential", caption="", align=center]
 
 | image::wiggins-nucleoidexclusion-cell.png[Spherocylinder Shape, 100%, title="", caption="", align=center]
-| image::SCinner-cellshape-crop.png[Spherocylinder Shape, 50%, title="", caption="", align=center]
+| image::SCforces-cellshape-crop.png[Spherocylinder Shape, 50%, title="", caption="", align=center]
 |==================================
 
-=== Nucleoid Flow
+=== Passive Model
 
 [quote, 'Stylianidou, Kuwada, and Wiggins [cite:stylianidou_cytoplasmic_2014]']
 If we combine the predicted drift velocity maps for the nucleoid exclusion and membrane confinement
@@ -81,12 +81,12 @@ drift velocity map throughout the entire cell.
 
  * They use an entirely _passive_ model, like ours, to predict the same nucleoid flow
 
-=== Nucleoid Diffusion
+=== Position Dependent Diffusion Constant
 
 [cols="^2a,^3a",grid="none",frame="none"]
 |==================================
 
-| image::wiggins-diffusion-B.png[title="", caption="Fig. 4B from Wiggins"]
+| image::wiggins-diffusion-B.png[title="Fig. 4B from Wiggins", caption=""]
 
 |
  * "`The nucleoid-exclusion model would naively predict both decreased occupancy over the nucleoid as
@@ -94,6 +94,35 @@ drift velocity map throughout the entire cell.
  phenomenology: comparison between the occupancy of MS2-mRNA (Fig. 2 A) and the position
  dependent diffusion coefficient (Fig. 4 B) reveals that *the highest diffusion coefficients are
  observed in regions with the lowest MS2-mRNA occupancy and the highest nucleoid density.*`"
+
+|==================================
+
+=== Position Dependent Diffusion Constant
+
+[cols="^.>a,^.>a",grid="none",frame="none"]
+|==================================
+
+| image::wiggins-diffusion-B.png["", 80%, title="Fig. 4B from Wiggins", caption=""]
+| image::SCforces6-diffusion.svg["", 80%, title="Soft Potential", caption=""]
+
+.<| image::wiggins-nucleoidexclusion-cell.png[Spherocylinder Shape, 100%, title="", caption="", align=center]
+.<| image::SCforces-cellshape-crop.png[Spherocylinder Shape, 50%, title="", caption="", align=center]
+
+|
+<| Diffusion constant calculated from \(\left< \Delta x^2 \right>\)
+
+|==================================
+
+=== Step Size Distribution
+
+[cols="^.>a,^.>a",grid="none",frame="none"]
+|==================================
+
+| image::wiggins-expsteps.png["", 100%, title="Wiggins", caption="", align=center]
+| image::SCforces6-dxdistrib.svg["", 100%, title="Soft Potential", caption="", align=center]
+
+| image::wiggins-nucleoidexclusion-cell.png[Spherocylinder Shape, 100%, title="", caption="", align=center]
+| image::SCforces-cellshape-crop.png[Spherocylinder Shape, 50%, title="", caption="", align=center]
 
 |==================================
 
