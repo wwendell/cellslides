@@ -1,4 +1,4 @@
-= Janus Particles, Nucleoids, +++<br/>+++ and Active Matter
+= Nucleoids, Janus Particles, +++<br/>+++ and Active Matter
 Wendell Smith
 :source-highlighter: pygments
 :pygments-style: autumn
@@ -12,12 +12,108 @@ Wendell Smith
 // :revealjsdir: https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/
 :stem: latexmath
 :imagesdir: imgs
+:toc:
 
-== AGENDA
+== Topics
 
- * Janus Particle Propulsion
- * Nucleoid Flow
- * Activity Simulations
+[discrete]
+=== Flow through the Nucleoid
+
+[discrete]
+=== Janus Particle Propulsion
+
+[discrete]
+=== Active Particle Simulations
+
+== Flow through the Nucleoid
+
+// cropped images created with
+// convert SCinner-cellshape.png -crop 50x100%+0+0 +repage -flop SCinner-cellshape-crop.png 
+
+[cols="^a,^a",grid="none",frame="none"]
+|==================================
+| Hard Inner Spherocylinder | Soft Potential
+
+| image::SCinner2-flow.svg[Spherocylinder Flow, 100%, title="", caption="", align=center]
+| image::SCforces6-flow.svg[Spherocylinder Flow, 100%, title="", caption="", align=center]
+
+| image::SCinner-cellshape-crop.png[Spherocylinder Shape, 55%, title="", caption="", align=center]
+| image::SCforces-cellshape-crop.png[Spherocylinder Shape, 55%, title="", caption="", align=center]
+|==================================
+
+=== Flow through the Nucleoid
+
+
+[cols="^55a,^45a",grid="none",frame="none"]
+|==================================
+| Wiggins | Soft Potential
+
+| image::wiggins-nucleoidexclusion-drift.png[Spherocylinder Flow, 100%, title="", caption="", align=center]
+| image::SCforces6-flow.svg[Spherocylinder Flow, 100%, title="", caption="", align=center]
+
+| image::wiggins-nucleoidexclusion-cell.png[Spherocylinder Shape, 100%, title="", caption="", align=center]
+| image::SCforces-cellshape-crop.png[Spherocylinder Shape, 65%, title="", caption="", align=center]
+|==================================
+
+=== Passive Model
+
+[quote, 'Stylianidou, Kuwada, and Wiggins [cite:stylianidou_cytoplasmic_2014]']
+If we combine the predicted drift velocity maps for the nucleoid exclusion and membrane confinement
+models, we see striking agreement with the qualitative shape and quantitative scale of the observed
+drift velocity map throughout the entire cell.
+
+ * They use an entirely _passive_ model, like ours, to predict the same nucleoid flow
+
+=== Position Dependent Diffusion Constant
+
+[cols="^2a,^3a",grid="none",frame="none"]
+|==================================
+
+| image::wiggins-diffusion-B.png[title="Fig. 4B from Wiggins", caption=""]
+
+|
+ * "`The nucleoid-exclusion model would naively predict both decreased occupancy over the nucleoid as
+ well as a decreased diffusion coefficient. Strikingly, our results show exactly the opposite
+ phenomenology: comparison between the occupancy of MS2-mRNA (Fig. 2 A) and the position
+ dependent diffusion coefficient (Fig. 4 B) reveals that *the highest diffusion coefficients are
+ observed in regions with the lowest MS2-mRNA occupancy and the highest nucleoid density.*`"
+
+|==================================
+
+=== Position Dependent Diffusion Constant
+
+[cols="^.>52a,^.>48a",grid="none",frame="none"]
+|==================================
+| Fig. 4B from Wiggins | Soft Potential
+
+| image::wiggins-diffusion-B.png["", 75%, title="", caption="", align=center]
+| image::SCforces6-diffusion.svg["", 75%, title="", caption="", align=center]
+
+.<| image::wiggins-nucleoidexclusion-cell.png[Spherocylinder Shape, 60%, title="", caption="", align=center]
+.<| image::SCforces-cellshape-crop.png[Spherocylinder Shape, 35%, title="", caption="", align=center]
+
+|
+<| Diffusion constant calculated from
+
+\[
+    D \sim \frac{\left< \Delta x^2 \right>}{\Delta t}
+\]
+
+|==================================
+
+=== Step Size Distribution
+
+[cols="^.>a,^.>a",grid="none",frame="none"]
+|==================================
+| Wiggins | Soft Potential
+
+| image::wiggins-expsteps.png["", 100%, title="", caption="", align=center]
+| image::SCforces6-dxdistrib.svg["", 100%, title="", caption="", align=center]
+
+| image::wiggins-nucleoidexclusion-cell.png[Spherocylinder Shape, 100%, title="", caption="", align=center]
+| image::SCforces-cellshape-crop.png[Spherocylinder Shape, 50%, title="", caption="", align=center]
+
+|==================================
 
 == Janus Particle Propulsion
 
@@ -44,60 +140,7 @@ image::janus-h202-msd.png[Janus Particle MSDs, 100%, title="", caption="", align
 * Particles in H~2~O~2~ move much farther
 --
 
-== Nucleoid Flow
-
-// cropped images created with
-// convert SCinner-cellshape.png -crop 50x100%+0+0 +repage -flop SCinner-cellshape-crop.png 
-
-[cols="^a,^a",grid="none",frame="none"]
-|==================================
-
-| image::SCforces6-flow.svg[Spherocylinder Flow, 100%, title="Soft Potential", caption="", align=center]
-| image::SCinner2-flow.svg[Spherocylinder Flow, 100%, title="Hard Inner Spherocylinder", caption="", align=center]
-
-| image::SCforces-cellshape-crop.png[Spherocylinder Shape, 50%, title="", caption="", align=center]
-| image::SCinner-cellshape-crop.png[Spherocylinder Shape, 50%, title="", caption="", align=center]
-|==================================
-
-=== Nucleoid Flow
-
-
-[cols="^a,^a",grid="none",frame="none"]
-|==================================
-
-| image::wiggins-nucleoidexclusion-drift.png[Spherocylinder Flow, 100%, title="Soft Potential", caption="", align=center]
-| image::SCinner2-flow.svg[Spherocylinder Flow, 100%, title="Hard Inner Spherocylinder", caption="", align=center]
-
-| image::wiggins-nucleoidexclusion-cell.png[Spherocylinder Shape, 100%, title="", caption="", align=center]
-| image::SCinner-cellshape-crop.png[Spherocylinder Shape, 50%, title="", caption="", align=center]
-|==================================
-
-=== Nucleoid Flow
-
-[quote, 'Stylianidou, Kuwada, and Wiggins [cite:stylianidou_cytoplasmic_2014]']
-If we combine the predicted drift velocity maps for the nucleoid exclusion and membrane confinement
-models, we see striking agreement with the qualitative shape and quantitative scale of the observed
-drift velocity map throughout the entire cell.
-
- * They use an entirely _passive_ model, like ours, to predict the same nucleoid flow
-
-=== Nucleoid Diffusion
-
-[cols="^2a,^3a",grid="none",frame="none"]
-|==================================
-
-| image::wiggins-diffusion-B.png[title="", caption="Fig. 4B from Wiggins"]
-
-|
- * "`The nucleoid-exclusion model would naively predict both decreased occupancy over the nucleoid as
- well as a decreased diffusion coefficient. Strikingly, our results show exactly the opposite
- phenomenology: comparison between the occupancy of MS2-mRNA (Fig. 2 A) and the position
- dependent diffusion coefficient (Fig. 4 B) reveals that *the highest diffusion coefficients are
- observed in regions with the lowest MS2-mRNA occupancy and the highest nucleoid density.*`"
-
-|==================================
-
-== Active Matter Simulations
+== Active Particle Simulations
 
 * Metabolic activity does not significantly raise the temperature of the cell (right?)
 * ATP, the main energy source of metabolism, has energy \(E_\mathrm{ATP} \sim 20 k_B T\)
@@ -112,9 +155,9 @@ drift velocity map throughout the entire cell.
 \]
 ** WCA potential / repulsive Lennard-Jones for \(U\)
 ** Damping \(\gamma\) to simulate solution viscosity
-** Random, instantaneous "kicks" to the particles
-*** \(\vec \Gamma_T\) for the thermostat; balanced by \(\gamma\)
-*** \(\vec \Gamma_k\) for metabolism
+** *Random, instantaneous "kicks"* to the particles
+*** \(\vec \Gamma_T\) *for the thermostat*; balanced by \(\gamma\), the drag force
+*** \(\vec \Gamma_k\) *for metabolism*
 
 === Random Kicks
 
@@ -124,9 +167,10 @@ drift velocity map throughout the entire cell.
 |
 * \(\Gamma_T \sim \Delta t k_B T \sim {10}^{-5} k_B T\)
 * Every timestep
-* Correlated: satisfy FDT
-* Gaussian distribution
-* Balanced by \(-\gamma \vec v\)
+* Mimic "bumping into water molecules"
+** Correlated: satisfy Fluctuation-Dissipation Theorem
+** Gaussian distribution
+** Balanced by the drag force \(-\gamma \vec v\)
 |
 * \(0 \le E_k \le 20 k_B T\)
 * Instantaneous
@@ -160,6 +204,9 @@ image::parry-MSD-untreated-dnp.png["MSD of untreated vs. DNP+ cells", 80%, capti
 
 === MSDs
 
+[discrete]
+==== with \(20 k_B T\) Kicks
+
 [cols="^a,^a",grid="none",frame="none"]
 |==================================
 
@@ -181,6 +228,18 @@ image::parry-MSD-untreated-dnp.png["MSD of untreated vs. DNP+ cells", 80%, capti
 | image::randkicktest-MSD-f0.62-R200-N100.svg[title="", caption="", align=center]
 
 2+| image::randkicktest-MSD-f0.64-R200-N100.svg[title="", caption="", align=center]
+|==================================
+
+== MSD Comparison
+
+
+[cols="^a,^a",grid="none",frame="none"]
+|==================================
+
+| image::randkicktest-MSD-f0.60-R20-N100.svg[title="", caption="", align=center]
+| image::randkicktest-MSD-f0.62-R20-N100.svg[title="", caption="", align=center]
+
+2+| image::parry-MSD-untreated-dnp.png["MSD of untreated vs. DNP+ cells", 80%, caption="", align=center]
 |==================================
 
 == Bibliography
