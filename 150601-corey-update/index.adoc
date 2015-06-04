@@ -1,5 +1,5 @@
 = \(\alpha_2\) and Active Matter
-Wendell Smith
+// Wendell Smith
 :source-highlighter: pygments
 :pygments-style: autumn
 :revealjs_theme: simple
@@ -21,6 +21,9 @@ Wendell Smith
 
 | image::max-alpha2-summary.png["", 100%, title="", caption="", align=center]
 | image::max-alpha2-t-summary.png["", 100%, title="", caption="", align=center]
+
+2+| Where \(\phi_g = 0.587\)
+
 |==================================
 
 === \(\alpha_2\) Summary
