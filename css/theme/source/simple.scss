@@ -31,8 +31,25 @@ $linkColor: #00008B;
 $linkColorHover: lighten( $linkColor, 20% );
 $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 
+$mainFontSize: 32px;
+
+$heading1Size: 3em;
+$heading2Size: 2.5em;
+$heading3Size: 1.55em;
+$heading4Size: 1.2em;
 
 
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+
+.reveal table th, .reveal table td {
+	text-align: left;
+	padding: 0.2em 0.5em 0.2em 0.5em;
+	border-bottom: none;
+};
+
+.reveal section img {
+    margin: 15px 0px;
+    border: 0;
+};
