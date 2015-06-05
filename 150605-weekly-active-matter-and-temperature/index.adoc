@@ -8,7 +8,8 @@
 :revealjs_height: 960
 :revealjs_margin: 0.04
 :revealjs_history: false
-:revealjsdir: https://wackywendell.github.io/reveal.js/
+// :revealjsdir: https://wackywendell.github.io/reveal.js/
+:revealjsdir: ..
 // :revealjsdir: https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/
 :stem: latexmath
 :imagesdir: imgs
@@ -46,6 +47,12 @@ image::randkick4-MSD-f0.62-R200-N100.svg["", 100%, title="", caption="", align=c
 
 == Nucleoid Density
 
-image::wiggins-nucleoid-density.svg["", 60%, title="", caption="", align=center]
+[cols="^a,^a",grid="none",frame="none"]
+|==================================
 
-*Note*: Units of "Nucleoid Density" are not given.
+| image::wiggins-nucleoidexclusion-linear.png["Figure from Wiggins", 80%, title="", caption="", align=center]
+| image::wiggins-nucleoid-density.svg["Digitized and Smoothed", 80%, title="", caption="", align=center]
+|==================================
+
+* Units of "Nucleoid Density" are not given
+* I can simulate using varied constant factors
