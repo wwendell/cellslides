@@ -45,6 +45,11 @@ image::randkick4-MSD-f0.62-R20-N100.svg["", 100%, title="", caption="", align=ce
 
 image::randkick4-MSD-f0.62-R200-N100.svg["", 100%, title="", caption="", align=center]
 
+=== Use a Harmonic Potential
+
+ * The current repulsive Lennard-Jones may be too similar to hard-spheres, and may be unaffected by \(20 k_B T\) "jolts"
+ * A softer potential may provide lower "barriers" that can be jumped with a \(20 k_B T\) "jolt"
+
 == Nucleoid Density
 
 [cols="^a,^a",grid="none",frame="none"]
@@ -54,5 +59,6 @@ image::randkick4-MSD-f0.62-R200-N100.svg["", 100%, title="", caption="", align=c
 | image::wiggins-nucleoid-density.svg["Digitized and Smoothed", 80%, title="", caption="", align=center]
 |==================================
 
-* Units of "Nucleoid Density" are not given
-* I can simulate using varied constant factors
+ * Units of "Nucleoid Density" are not given
+ * I can simulate using varied constant factors
+ * Code mostly written, no simulations run yet
