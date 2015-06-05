@@ -43,3 +43,9 @@ image::randkick4-MSD-f0.62-R20-N100.svg["", 100%, title="", caption="", align=ce
 === Temperature and Activity
 
 image::randkick4-MSD-f0.62-R200-N100.svg["", 100%, title="", caption="", align=center]
+
+== Nucleoid Density
+
+image::wiggins-nucleoid-density.svg["", 60%, title="", caption="", align=center]
+
+*Note*: Units of "Nucleoid Density" are not given.
