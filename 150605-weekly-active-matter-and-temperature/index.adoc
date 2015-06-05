@@ -1,0 +1,45 @@
+= Active Matter Update
+// Wendell Smith
+:source-highlighter: pygments
+:pygments-style: autumn
+:revealjs_theme: simple
+:revealjs_transition: none
+:revealjs_width: 1280
+:revealjs_height: 960
+:revealjs_margin: 0.04
+:revealjs_history: false
+:revealjsdir: https://wackywendell.github.io/reveal.js/
+// :revealjsdir: https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/
+:stem: latexmath
+:imagesdir: imgs
+// :toc:
+
+== Temperature and Activity
+
+[cols="^a,^a",grid="none",frame="none"]
+|==================================
+| Temperature | Activity
+
+| Brownian thermostat set to some \(T\)
+| Brownian thermostat set to \(T=1\)
+
+| Thermostat keeps \(T\) fixed
+| Activity raises temperature due to energy input
+
+|==================================
+
+=== Temperature and Activity
+
+image::randkick4-MSD-f0.60-R20-N100.svg["", 100%, title="", caption="", align=center]
+
+=== Temperature and Activity
+
+image::randkick4-MSD-f0.60-R200-N100.svg["", 100%, title="", caption="", align=center]
+
+=== Temperature and Activity
+
+image::randkick4-MSD-f0.62-R20-N100.svg["", 100%, title="", caption="", align=center]
+
+=== Temperature and Activity
+
+image::randkick4-MSD-f0.62-R200-N100.svg["", 100%, title="", caption="", align=center]
