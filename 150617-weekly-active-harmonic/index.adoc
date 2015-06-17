@@ -15,7 +15,7 @@
 :imagesdir: imgs
 // :toc:
 
-== Temperature and Activity
+== Review: Temperature and Activity
 
 [cols="^a,^a",grid="none",frame="none"]
 |==================================
@@ -29,36 +29,43 @@
 
 |==================================
 
-=== Temperature and Activity
-
-image::randkick4-MSD-f0.60-R20-N100.svg["", 100%, title="", caption="", align=center]
-
-=== Temperature and Activity
-
-image::randkick4-MSD-f0.60-R200-N100.svg["", 100%, title="", caption="", align=center]
-
-=== Temperature and Activity
+=== Review: Temperature and Activity
 
 image::randkick4-MSD-f0.62-R20-N100.svg["", 100%, title="", caption="", align=center]
 
-=== Temperature and Activity
-
-image::randkick4-MSD-f0.62-R200-N100.svg["", 100%, title="", caption="", align=center]
-
-=== Use a Harmonic Potential
+=== Plan: Use a Harmonic Potential
 
  * The current repulsive Lennard-Jones may be too similar to hard-spheres, and may be unaffected by \(20 k_B T\) "jolts"
  * A softer potential may provide lower "barriers" that can be jumped with a \(20 k_B T\) "jolt"
 
-== Nucleoid Density
+=== Results: Harmonic Potential
 
-[cols="^a,^a",grid="none",frame="none"]
-|==================================
+image::randkick4H-MSD-f0.72-R20-N40-e72.svg["", 100%, title="", caption="", align=center]
 
-| image::wiggins-nucleoidexclusion-linear.png["Figure from Wiggins", 80%, title="", caption="", align=center]
-| image::wiggins-nucleoid-density.svg["Digitized and Smoothed", 80%, title="", caption="", align=center]
-|==================================
+=== Results: Harmonic Potential
 
- * Units of "Nucleoid Density" are not given
- * I can simulate using varied constant factors
- * Code mostly written, no simulations run yet
+image::randkick4H-MSD-f0.68-R20-N40-e1000.svg["", 100%, title="", caption="", align=center]
+
+Thought: Perhaps its that the longer the plateau, the greater the effect of random activity.
+
+== Review: Maximal \(\alpha_2\)
+
+image::rsqsbis5-MSD-t2000.svg["", 100%, title="", caption="", align=center]
+
+=== Review: Maximal \(\alpha_2\)
+
+From the MSDs, we get \(\alpha_2\):
+
+image::rsqsbis5-a2-t2000.svg["", 100%, title="", caption="", align=center]
+
+=== Review: Maximal \(\alpha_2\)
+
+Some simulations, however, have not relaxed in the time I left them running.
+
+image::rsqsbis5-relaxtimes.svg["", 60%, title="", caption="", align=center]
+
+=== Review: Maximal \(\alpha_2\)
+
+Simulations that have not relaxed do not have fixed results. If we remove those simulations, this is the plot of \(\alpha_2\) we are left with.
+
+image::rsqsbis5-a2-relaxed-t2000.svg["", 100%, title="", caption="", align=center]
