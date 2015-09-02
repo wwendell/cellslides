@@ -492,119 +492,49 @@ MathJax.Hub.Config({
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_review_temperature_and_activity">Review: Temperature and Activity</h2>
+<h2 id="_experimental_data">Experimental Data</h2>
 <div class="sectionbody">
 <table class="tableblock frame-none grid-none spread">
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
 </colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-center valign-top">Temperature</th>
-<th class="tableblock halign-center valign-top">Activity</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top"><div><div class="paragraph">
-<p>Brownian thermostat set to some \(T\)</p>
+<td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="imgs/exp_MSD.svg" alt="" width="100%">
+</div>
 </div></div></td>
-<td class="tableblock halign-center valign-top"><div><div class="paragraph">
-<p>Brownian thermostat set to \(T=1\)</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><div><div class="paragraph">
-<p>Thermostat keeps \(T\) fixed</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div><div class="paragraph">
-<p>Activity raises temperature due to energy input</p>
+<td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="imgs/exp_a2.svg" alt="" width="100%">
+</div>
 </div></div></td>
 </tr>
 </tbody>
 </table>
 <div class="sect2">
-<h3 id="_review_temperature_and_activity_2">Review: Temperature and Activity</h3>
+<h3 id="_matching_alpha_2_timescale">Matching \(\alpha_2\) Timescale</h3>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="imgs/randkick4-MSD-f0.62-R20-N100.svg" alt="" width="100%">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_plan_use_a_harmonic_potential">Plan: Use a Harmonic Potential</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>The current repulsive Lennard-Jones may be too similar to hard-spheres, and may be unaffected by \(20 k_B T\) "jolts"</p>
-</li>
-<li>
-<p>A softer potential may provide lower "barriers" that can be jumped with a \(20 k_B T\) "jolt"</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_results_harmonic_potential">Results: Harmonic Potential</h3>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="imgs/randkick4H-MSD-f0.72-R20-N40-e72.svg" alt="" width="100%">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_results_harmonic_potential_2">Results: Harmonic Potential</h3>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="imgs/randkick4H-MSD-f0.68-R20-N40-e1000.svg" alt="" width="100%">
+<img src="imgs/exp_hs_compare_a2.svg" alt="" width="60%">
 </div>
 </div>
 <div class="paragraph">
-<p>Thought: Perhaps its that the longer the plateau, the greater the effect of random activity.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_review_maximal_alpha_2">Review: Maximal \(\alpha_2\)</h2>
-<div class="sectionbody">
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="imgs/rsqsbis5-MSD-t2000.svg" alt="" width="100%">
+<p>Simulation data is from hard spheres, with packing fraction (\(\phi\)) denoted in the legend.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_review_maximal_alpha_2_2">Review: Maximal \(\alpha_2\)</h3>
-<div class="paragraph">
-<p>From the MSDs, we get \(\alpha_2\):</p>
-</div>
+<h3 id="_matching_alpha_2_timescale_msd">Matching \(\alpha_2\) Timescale: MSD</h3>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="imgs/rsqsbis5-a2-t2000.svg" alt="" width="100%">
+<img src="imgs/exp_hs_compare_msd.svg" alt="" width="60%">
 </div>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_review_maximal_alpha_2_3">Review: Maximal \(\alpha_2\)</h3>
 <div class="paragraph">
-<p>Some simulations, however, have not relaxed in the time I left them running.</p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="imgs/rsqsbis5-relaxtimes.svg" alt="" width="60%">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_review_maximal_alpha_2_4">Review: Maximal \(\alpha_2\)</h3>
-<div class="paragraph">
-<p>Simulations that have not relaxed do not have fixed results. If we remove those simulations, this is the plot of \(\alpha_2\) we are left with.</p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="imgs/rsqsbis5-a2-relaxed-t2000.svg" alt="" width="100%">
-</div>
+<p>Simulation data is for hard spheres at \(\phi=0.58\), for a simulation run as
+long as the experimental data in scaled time.</p>
 </div>
 </div>
 </div>
@@ -612,7 +542,7 @@ MathJax.Hub.Config({
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-09-02 16:51:57 EDT
+Last updated 2015-09-02 19:52:18 EDT
 </div>
 </div>
 </body>
