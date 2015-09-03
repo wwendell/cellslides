@@ -1,4 +1,4 @@
-= Active Matter Update
+= Hard Spheres
 // Wendell Smith
 :source-highlighter: pygments
 :pygments-style: autumn
