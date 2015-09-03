@@ -65,3 +65,23 @@ run as long as the experimental data in scaled time._#
 image::WCA-LJ-potential.svg["", 60%]
 
 "Soft" spheres can also be steadily tuned to be more attractive.
+
+== Step Size Distributions
+
+[cols="^a,^a",grid="none",frame="none"]
+|==================================
+
+| image::LJ_steps.svg["", 100%, title="", caption="", align=center]
+| image::hs_steps_F0.57.svg["", 100%, title="", caption="", align=center]
+
+|==================================
+
+=== Step Size Distributions
+
+[cols="^a,^a",grid="none",frame="none"]
+|==================================
+
+| image::LJ_steps.svg["", 100%, title="", caption="", align=center]
+| image::hs_steps_F0.58.svg["", 100%, title="", caption="", align=center]
+
+|==================================

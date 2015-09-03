@@ -15,6 +15,12 @@ copies: imgs/* Makefile
 	cp ~/work/cells/imgs/HS-WCA-a2-F0.58.svg imgs/
 	cp ~/work/cells/imgs/WCA-potential.svg imgs/
 	cp ~/work/cells/imgs/WCA-LJ-potential.svg imgs/
+	cp ~/work/cells/imgs/hs_steps_F0.55.svg imgs/
+	cp ~/work/cells/imgs/hs_steps_F0.57.svg imgs/
+	cp ~/work/cells/imgs/hs_steps_F0.58.svg imgs/
+	cp ~/work/cells/imgs/hs_steps_F0.582.svg imgs/
+	cp ~/work/cells/imgs/Pdr_T0.44_t1e6_s3_N100_n1.0_vadd.svg imgs/LJ_steps.svg
+	
 
 clean:
 	rm -f index{,2}.html index-ref.adoc
