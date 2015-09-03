@@ -27,13 +27,41 @@
 
 === Matching \(\alpha_2\) Timescale
 
-image::exp_hs_compare_a2.svg["", 60%, title="", caption="", align=center]
+image::exp_hs_compare_a2.svg["", 50%, title="", caption="", align=center]
 
-Simulation data is from hard spheres, with packing fraction (\(\phi\)) denoted in the legend.
+[small]#_Simulation data is from hard spheres, with packing fraction (\(\phi\))
+denoted in the legend._#
 
 === Matching \(\alpha_2\) Timescale: MSD
 
-image::exp_hs_compare_msd.svg["", 60%, title="", caption="", align=center]
+image::exp_hs_compare_msd.svg["", 50%, title="", caption="", align=center]
 
-Simulation data is for hard spheres at \(\phi=0.58\), for a simulation run as
-long as the experimental data in scaled time.
+[small]#_Simulation data is for hard spheres at \(\phi=0.58\), for a simulation
+run as long as the experimental data in scaled time._#
+
+Crowding can yield similar \(\alpha_2\) values and MSDs as our experiments, but
+cannot match the _width_ of the \(\alpha_2\) peak or the _variability_ of the
+MSD.
+
+== Characterizing Hard Spheres
+
+image::hs_a2.svg["", 60%, title="", caption="", align=center]
+
+=== Tuning "Soft" Interactions
+
+image::WCA-potential.svg["", 60%, title="WCA Potential", caption=""]
+
+"Soft" spheres with an increasingly "sharp" potential become increasingly like hard spheres
+
+=== Tuning "Soft" Interactions
+
+image::HS-WCA-a2-F0.58.svg["", 60%]
+
+[small]#_Simulation data is for hard spheres (black), and a WCA for a simulation
+run as long as the experimental data in scaled time._#
+
+=== Tuning "Soft" Interactions
+
+image::WCA-LJ-potential.svg["", 60%]
+
+"Soft" spheres can also be steadily tuned to be more attractive.
