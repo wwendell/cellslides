@@ -8,6 +8,7 @@ index2.html: index.adoc imgs/* Makefile
 
 copies: imgs/* Makefile
 	cp ~/work/cells/imgs/exp_a2.svg imgs/
+	cp ~/work/cells/imgs/exp_a2_trajs.svg imgs/
 	cp ~/work/cells/imgs/exp_MSD.svg imgs/
 	cp ~/work/cells/imgs/exp_hs_compare_a2.svg imgs/
 	cp ~/work/cells/imgs/exp_hs_compare_msd.svg imgs/
