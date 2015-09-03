@@ -1,16 +1,20 @@
 all: index2.html index.html
 
-index.html: index.adoc
+index.html: index.adoc imgs/* Makefile
 	asciidoctor -b html5 -T ~/code/ascreveal/templates/slim index.adoc -o index.html
 
-index2.html: index.adoc
+index2.html: index.adoc imgs/* Makefile
 	asciidoctor -b html5 index.adoc -o index2.html
 
-copies:
+copies: imgs/* Makefile
 	cp ~/work/cells/imgs/exp_a2.svg imgs/
 	cp ~/work/cells/imgs/exp_MSD.svg imgs/
 	cp ~/work/cells/imgs/exp_hs_compare_a2.svg imgs/
 	cp ~/work/cells/imgs/exp_hs_compare_msd.svg imgs/
+	cp ~/work/cells/imgs/hs_a2.svg imgs/
+	cp ~/work/cells/imgs/HS-WCA-a2-F0.58.svg imgs/
+	cp ~/work/cells/imgs/WCA-potential.svg imgs/
+	cp ~/work/cells/imgs/WCA-LJ-potential.svg imgs/
 
 clean:
 	rm -f index{,2}.html index-ref.adoc
