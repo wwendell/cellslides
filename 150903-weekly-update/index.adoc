@@ -43,7 +43,7 @@ Crowding can yield similar \(\alpha_2\) values and MSDs as our experiments, but
 cannot match the _width_ of the \(\alpha_2\) peak or the _variability_ of the
 MSD.
 
-=== Matching \(\alpha_2\) Timescale
+=== \(\alpha_2\) Variability
 
 image::exp_a2_trajs.svg["", 50%, title="", caption="", align=center]
 
