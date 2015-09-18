@@ -1,0 +1,38 @@
+= Hard Spheres and Polymers
+// Wendell Smith
+:source-highlighter: pygments
+:pygments-style: autumn
+:revealjs_theme: simple
+:revealjs_transition: none
+:revealjs_width: 1280
+:revealjs_height: 960
+:revealjs_margin: 0.04
+:revealjs_history: false
+// :revealjsdir: https://wackywendell.github.io/reveal.js/
+:revealjsdir: ..
+// :revealjsdir: https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/
+:stem: latexmath
+:imagesdir: imgs
+// :toc:
+
+== Characterizing Hard Spheres
+
+image::hs_a2.svg["", 60%, title="", caption="", align=center]
+
+=== α₂ goes to ∞?
+
+image::hs_a2_log_fit.svg["", 40%, title="", caption="", align=center]
+
+Line drawn is \(A \left(\phi^\star - \phi\right)^n\), where
+
+\( \phi^\star = 0.6138 \pm 0.0031\) (jamming is at \(\phi^J = 0.634\pm0.004\) )
+
+\( n = -2.08 \pm 0.19 \)
+
+*That would mean α₂ goes to ∞.*
+
+== Polymers
+
+=== Example
+
+video::poly_N160_F0.55.webm[width=600, options="autoplay,loop"]
