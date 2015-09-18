@@ -10,6 +10,8 @@ copies: Makefile
 	cp ~/work/cells/imgs/hs_a2.svg imgs/
 	cp ~/work/cells/imgs/hs_a2_log_fit.svg imgs/
 	cp ~/work/cells/imgs/aging_cartoon.svg imgs/
+	cp ~/work/cells/imgs/poly_MSD.svg imgs/
+	cp ~/work/cells/imgs/poly_a2.svg imgs/
 
 movie: Makefile
 	ffmpeg -y -i ~/work/cells/mov/poly_N160_F0.55.mp4  -acodec libvorbis -aq 5 -ac 2 -qmax 25 -threads 2 imgs/poly_N160_F0.55.webm

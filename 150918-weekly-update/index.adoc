@@ -53,3 +53,11 @@ _Note: Plot shown is only a cartoon._
 === Example
 
 video::poly_N160_F0.55.webm[width=600, options="autoplay,loop"]
+
+=== Example: MSD
+
+image::poly_MSD.svg["", 90%, title="", caption="", align=center]
+
+=== Example: α₂
+
+image::poly_a2.svg["", 100%, title="", caption="", align=center]
