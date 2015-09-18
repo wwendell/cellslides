@@ -23,8 +23,6 @@ image::hs_a2.svg["", 60%, title="", caption="", align=center]
 
 image::hs_a2_log_fit.svg["", 40%, title="", caption="", align=center]
 
-// cartoon of aging work
-
 Line drawn is \(A \left(\phi^\star - \phi\right)^n\), where
 
 \( \phi^\star = 0.6138 \pm 0.0031\) (jamming is at \(\phi^J = 0.634\pm0.004\) )
@@ -33,14 +31,24 @@ Line drawn is \(A \left(\phi^\star - \phi\right)^n\), where
 
 *That would mean α₂ goes to ∞.*
 
+=== Aging
+
+image::aging_cartoon.svg["", 40%, title="", caption="", align=center]
+
+When we increase the density, it takes a long time to equilibrate. 
+
+How does α₂ react as we equilibrate?
+
+Can we get an estimate of α₂ at even higher distances by studying non-equilibrium data?
+
+_Note: Plot shown is only a cartoon._
+
 == New Directions: Polymers
 
-==== How do polymers affect α₂?
+==== How do polymers such as RNA and DNA affect α₂?
 
  * Polymers may create micro-environments, leading to large α₂
- * RNA and DNA
- * Varying lengths
- * Uncertain 
+ * Investigate the affect of polymer density and size on α₂ of particles
 
 === Example
 
