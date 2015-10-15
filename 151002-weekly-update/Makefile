@@ -7,13 +7,18 @@ index2.html: index.adoc imgs/* Makefile
 	asciidoctor -b html5 index.adoc -o index2.html
 
 copies: Makefile | imgs
-	cp ~/work/cells/imgs/hs_a2_log_fit.svg imgs/
-	cp ~/work/cells/imgs/aging_cartoon.svg imgs/
-	cp ~/work/cells/imgs/hslocpairs_a2_time_f0.55.svg imgs/
-	cp ~/work/cells/imgs/hslocpairs_a2_time_f0.57.svg imgs/
-	cp ~/work/cells/imgs/hslocpairs_a2_time_f0.58.svg imgs/
-	cp ~/work/cells/imgs/exp-a2-mean.svg imgs/
-	cp ~/work/cells/imgs/exp-a2-each.svg imgs/
+	cp -u ~/work/cells/imgs/hs_a2.svg imgs/
+	cp -u ~/work/cells/imgs/hs_a2_log_fit.svg imgs/
+	cp -u ~/work/cells/imgs/aging_cartoon.svg imgs/
+	cp -u ~/work/cells/imgs/hslocpairs_a2_time_f0.55.svg imgs/
+	cp -u ~/work/cells/imgs/hslocpairs_a2_time_f0.57.svg imgs/
+	cp -u ~/work/cells/imgs/hslocpairs_a2_time_f0.58.svg imgs/
+	cp -u ~/work/cells/imgs/exp-a2-mean.svg imgs/
+	cp -u ~/work/cells/imgs/exp-a2-each.svg imgs/
+	cp -u ~/work/cells/imgs/hardsphere_means_F0.55.svg imgs/
+	cp -u ~/work/cells/imgs/hardsphere_means_F0.57.svg imgs/
+	cp -u ~/work/cells/imgs/hardsphere_means_F0.58.svg imgs/
+	cp -u ~/work/cells/imgs/hardsphere_means_F0.59.svg imgs/
 	
 imgs:
 	mkdir imgs
