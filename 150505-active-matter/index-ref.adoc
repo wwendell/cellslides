@@ -8,7 +8,8 @@ Wendell Smith
 :revealjs_height: 960
 :revealjs_margin: 0.04
 :revealjs_history: false
-:revealjsdir: https://wackywendell.github.io/reveal.js/
+// :revealjsdir: https://wackywendell.github.io/reveal.js/
+:revealjsdir: ..
 // :revealjsdir: https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/
 :stem: latexmath
 :imagesdir: imgs
@@ -53,14 +54,15 @@ image::parry-MSD-untreated-dnp.png["MSD of untreated vs. DNP+ cells", 80%, capti
 
 == Studying Active Matter
 
-* Active matter is an ongoing field of research
-
-* Much of it is concerned with studying bird flocks, fish schools, and bacterial swarms
-
-* Particles are usually *responsive* and *directed*
-
 [discrete]
 ==== *Active Matter* is composed of self-driven units, active particles, each capable of converting stored or ambient free energy into systematic movement [<<marchetti_hydrodynamics_2013,2>>]
+
+* Active matter is an active field of research
+
+* Much of it is concerned with studying bird flocks, fish schools, and bacterial swarms, but occasionally considers non-living particles
+
+* Most studies use *responsive* and/or *directed* particles
+
 
 == Janus Particles
 
@@ -91,6 +93,12 @@ image::janus-h202-msd.png[Janus Particle MSDs, 100%, title="", caption="", align
 * In eukaryotic cells, molecular motors are known to cause cytoplasm "mixing"
 * This mechanism is not expected to exist in E. coli
 
+== Biological Considerations
+
+* Metabolic activity does not significantly raise the temperature of the cell (right?)
+* ATP, the main energy source of metabolism, has energy \(E_\mathrm{ATP} \sim 20 k_B T\)
+* Metabolic activity would not have a rotational orientation
+
 == Simulating Metabolism
 
 * Langevin thermostat
@@ -100,20 +108,27 @@ image::janus-h202-msd.png[Janus Particle MSDs, 100%, title="", caption="", align
 ** WCA potential / repulsive Lennard-Jones for \(U\)
 ** Damping \(\gamma\) to simulate solution viscosity
 ** Random, instantaneous "kicks" to the particles
-** \(\vec \Gamma_T\) for the thermostat; balanced by \(\gamma\)
-** \(\vec \Gamma_k\) for metabolism
-
-== Biological Considerations
-
-* Metabolic activity does not significantly raise the temperature of the cell (right?)
-* ATP, the main energy source of metabolism, has energy \(E_\mathrm{ATP} \sim 20 k_B T\)
-* Metabolic activity would not have a rotational orientation
+*** \(\vec \Gamma_T\) for the thermostat; balanced by \(\gamma\)
+*** \(\vec \Gamma_k\) for metabolism
 
 == Random Kicks
 
-* The thermostat gives random kicks, \(\Gamma_T \sim \Delta t k_B T \sim {10}^{-5} k_B T\)
-
-* Metabolism kicks are \(0 \le E_k \le 20 k_B T\), instantaneous, and uncorrelated
+[options="header",cols="a,a"]
+|============================
+| Thermostat | Metabolism
+|
+* \(\Gamma_T \sim \Delta t k_B T \sim {10}^{-5} k_B T\)
+* Every timestep
+* Correlated: satisfy FDT
+* Gaussian distribution
+* Balanced by \(-\gamma \vec v\)
+|
+* \(0 \le E_k \le 20 k_B T\)
+* Instantaneous
+* Infrequent, ~100—1000 timesteps
+* Uncorrelated
+* Uniform distribution
+|============================
 
 == Simulation
 
@@ -155,7 +170,7 @@ image::randkicktest-MSD-f0.62-R200.svg[MSDs with Activity, 70%, title="", captio
 * \(f\) is the kick _frequency_, _T_ is the measured _temperature_
 * Kicks that are too frequent raise the temperature
 
-== Thanks!
+== Acknowledgments
 
 * Corey O'Hern, Mark Shattuck, Christine Jacobs-Wagner
 * Brad Parry, Ivan Surovtsev, Eric Dufresne, and everyone I talked to

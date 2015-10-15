@@ -544,20 +544,20 @@ metabolism blocked by biochemical means</p>
 <div class="sect1">
 <h2 id="_studying_active_matter">Studying Active Matter</h2>
 <div class="sectionbody">
+<h4 id="__strong_active_matter_strong_is_composed_of_self_driven_units_active_particles_each_capable_of_converting_stored_or_ambient_free_energy_into_systematic_movement_a_href_marchetti_hydrodynamics_2013_2_a" class="discrete"><strong>Active Matter</strong> is composed of self-driven units, active particles, each capable of converting stored or ambient free energy into systematic movement [<a href="#marchetti_hydrodynamics_2013">2</a>]</h4>
 <div class="ulist">
 <ul>
 <li>
-<p>Active matter is an ongoing field of research</p>
+<p>Active matter is an active field of research</p>
 </li>
 <li>
-<p>Much of it is concerned with studying bird flocks, fish schools, and bacterial swarms</p>
+<p>Much of it is concerned with studying bird flocks, fish schools, and bacterial swarms, but occasionally considers non-living particles</p>
 </li>
 <li>
-<p>Particles are usually <strong>responsive</strong> and <strong>directed</strong></p>
+<p>Most studies use <strong>responsive</strong> and/or <strong>directed</strong> particles</p>
 </li>
 </ul>
 </div>
-<h4 id="__strong_active_matter_strong_is_composed_of_self_driven_units_active_particles_each_capable_of_converting_stored_or_ambient_free_energy_into_systematic_movement_a_href_marchetti_hydrodynamics_2013_2_a" class="discrete"><strong>Active Matter</strong> is composed of self-driven units, active particles, each capable of converting stored or ambient free energy into systematic movement [<a href="#marchetti_hydrodynamics_2013">2</a>]</h4>
 </div>
 </div>
 <div class="sect1">
@@ -629,6 +629,24 @@ metabolism blocked by biochemical means</p>
 </div>
 </div>
 <div class="sect1">
+<h2 id="_biological_considerations">Biological Considerations</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Metabolic activity does not significantly raise the temperature of the cell (right?)</p>
+</li>
+<li>
+<p>ATP, the main energy source of metabolism, has energy \(E_\mathrm{ATP} \sim 20 k_B T\)</p>
+</li>
+<li>
+<p>Metabolic activity would not have a rotational orientation</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_simulating_metabolism">Simulating Metabolism</h2>
 <div class="sectionbody">
 <div class="ulist">
@@ -648,7 +666,8 @@ metabolism blocked by biochemical means</p>
 </li>
 <li>
 <p>Random, instantaneous "kicks" to the particles</p>
-</li>
+<div class="ulist">
+<ul>
 <li>
 <p>\(\vec \Gamma_T\) for the thermostat; balanced by \(\gamma\)</p>
 </li>
@@ -660,21 +679,6 @@ metabolism blocked by biochemical means</p>
 </li>
 </ul>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_biological_considerations">Biological Considerations</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Metabolic activity does not significantly raise the temperature of the cell (right?)</p>
-</li>
-<li>
-<p>ATP, the main energy source of metabolism, has energy \(E_\mathrm{ATP} \sim 20 k_B T\)</p>
-</li>
-<li>
-<p>Metabolic activity would not have a rotational orientation</p>
 </li>
 </ul>
 </div>
@@ -683,16 +687,60 @@ metabolism blocked by biochemical means</p>
 <div class="sect1">
 <h2 id="_random_kicks">Random Kicks</h2>
 <div class="sectionbody">
-<div class="ulist">
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Thermostat</th>
+<th class="tableblock halign-left valign-top">Metabolism</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="ulist">
 <ul>
 <li>
-<p>The thermostat gives random kicks, \(\Gamma_T \sim \Delta t k_B T \sim {10}^{-5} k_B T\)</p>
+<p>\(\Gamma_T \sim \Delta t k_B T \sim {10}^{-5} k_B T\)</p>
 </li>
 <li>
-<p>Metabolism kicks are \(0 \le E_k \le 20 k_B T\), instantaneous, and uncorrelated</p>
+<p>Every timestep</p>
+</li>
+<li>
+<p>Correlated: satisfy FDT</p>
+</li>
+<li>
+<p>Gaussian distribution</p>
+</li>
+<li>
+<p>Balanced by \(-\gamma \vec v\)</p>
 </li>
 </ul>
-</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="ulist">
+<ul>
+<li>
+<p>\(0 \le E_k \le 20 k_B T\)</p>
+</li>
+<li>
+<p>Instantaneous</p>
+</li>
+<li>
+<p>Infrequent, ~100—1000 timesteps</p>
+</li>
+<li>
+<p>Uncorrelated</p>
+</li>
+<li>
+<p>Uniform distribution</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="sect1">
@@ -823,7 +871,7 @@ Your browser does not support the video tag.
 </div>
 </div>
 <div class="sect1">
-<h2 id="_thanks">Thanks!</h2>
+<h2 id="_acknowledgments">Acknowledgments</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -858,7 +906,7 @@ Your browser does not support the video tag.
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-05-15 10:36:18 EDT
+Last updated 2015-10-15 18:11:15 EDT
 </div>
 </div>
 </body>
