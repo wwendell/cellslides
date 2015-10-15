@@ -8,7 +8,8 @@ Wendell Smith
 :revealjs_height: 960
 :revealjs_margin: 0.04
 :revealjs_history: false
-:revealjsdir: https://wackywendell.github.io/reveal.js/
+// :revealjsdir: https://wackywendell.github.io/reveal.js/
+:revealjsdir: ..
 // :revealjsdir: https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/
 :stem: latexmath
 :imagesdir: imgs
