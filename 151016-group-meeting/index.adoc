@@ -18,8 +18,9 @@
 == What does non-Gaussian mean?
 
 === What does non-Gaussian mean?
- - \( \alpha_2 = \frac{\left< x^4 \right> }{3 \left< x^2 \right> } - 1 \)
- - For a Gaussian distribution, \( \left< x^4 \right> = 3\left< x^2 \right> \), so \( \alpha_2 = 0 \) 
+ - \( \alpha_2 = \frac{\left< x^4 \right> }{3 \left< x^2 \right> } - 1 \) is the "non-Gaussian parameter"
+ - For a Gaussian distribution, \( \left< x^4 \right> = 3\left< x^2 \right> \), so \( \alpha_2 = 0 \)
+ - Can be calculated from particle-tracking
 
 === What does non-Gaussian mean?
  - A random walk (diffusion) is Gaussian _at any given time_:
@@ -27,6 +28,9 @@
  - So if the particles aren't diffusing, then \( \alpha_2 \neq 0 \)
    * For caged particles, \( \alpha_2 \approx -\frac{1}{5} \)
  - Closely related to caging and cage-breaking behavior
+   * In a cage, particles move very small distances
+   * Cage-breaking would involve much larger jumps
+   * The distribution of "step sizes" would be very non-Gaussian
    
 === What does non-Gaussian mean?
 
@@ -141,11 +145,6 @@ image::hs_steps_fitted_F0.584.svg["", 45%, title="Cartoon", caption="", align=ce
 == That's all.
 
 === Thanks!
-
-* Corey O'Hern, Mark Shattuck, Christine Jacobs-Wagner
-* Brad Parry, Ivan Surovtsev, Eric Dufresne, and everyone I talked to
-
-== Acknowledgments
 
 * Corey O'Hern, Mark Shattuck, Christine Jacobs-Wagner
 * Brad Parry, Ivan Surovtsev, Eric Dufresne, and everyone I talked to
