@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.2">
-<title>Just how non-gaussian can hard spheres get?</title>
+<title>Understanding Non-Gaussian Behavior</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -488,7 +488,7 @@ MathJax.Hub.Config({
 </head>
 <body class="article">
 <div id="header">
-<h1>Just how non-gaussian can hard spheres get?</h1>
+<h1>Understanding Non-Gaussian Behavior</h1>
 </div>
 <div id="content">
 <div class="sect1">
@@ -499,10 +499,13 @@ MathJax.Hub.Config({
 <div class="ulist">
 <ul>
 <li>
-<p>\( \alpha_2 = \frac{\left&lt; x^4 \right&gt; }{3 \left&lt; x^2 \right&gt; } - 1 \)</p>
+<p>\( \alpha_2 = \frac{\left&lt; x^4 \right&gt; }{3 \left&lt; x^2 \right&gt; } - 1 \) is the "non-Gaussian parameter"</p>
 </li>
 <li>
 <p>For a Gaussian distribution, \( \left&lt; x^4 \right&gt; = 3\left&lt; x^2 \right&gt; \), so \( \alpha_2 = 0 \)</p>
+</li>
+<li>
+<p>Can be calculated from particle-tracking</p>
 </li>
 </ul>
 </div>
@@ -527,6 +530,22 @@ MathJax.Hub.Config({
 <ul>
 <li>
 <p>For caged particles, \( \alpha_2 \approx -\frac{1}{5} \)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Closely related to caging and cage-breaking behavior</p>
+<div class="ulist">
+<ul>
+<li>
+<p>In a cage, particles move very small distances</p>
+</li>
+<li>
+<p>Cage-breaking would involve much larger jumps</p>
+</li>
+<li>
+<p>The distribution of "step sizes" would be very non-Gaussian</p>
 </li>
 </ul>
 </div>
@@ -877,7 +896,7 @@ MathJax.Hub.Config({
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-10-16 12:26:18 EDT
+Last updated 2015-10-16 12:32:54 EDT
 </div>
 </div>
 </body>
