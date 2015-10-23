@@ -1,0 +1,70 @@
+= α₂ Close to Jamming
+// Wendell Smith
+:source-highlighter: pygments
+:pygments-style: autumn
+:revealjs_theme: simple
+:revealjs_transition: none
+:revealjs_width: 1280
+:revealjs_height: 960
+:revealjs_margin: 0.04
+:revealjs_history: false
+// :revealjsdir: https://wackywendell.github.io/reveal.js/
+:revealjsdir: ..
+// :revealjsdir: https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/
+:stem: latexmath
+:imagesdir: imgs
+// :toc:
+ 
+
+== Close to Jamming
+
+image::n100_r1.4_s100_F0.001_t2.png["", 35%, title="", caption="", align=center]
+
+ - Glassy behavior starts at \( \phi \approx 0.55 – 0.59 \)
+ - Jamming is at \( \phi \approx 0.64 \)
+ - What happens if we go *really* close to jamming?
+   * Permanent Caging
+   * Floaters
+   
+== Step Distributions
+
+// \( \Delta \phi = 10^{-3} \)
+
+image::hsdphi_steps_d0.001_t100_n40.svg["", 65%, title="", caption="", align=center]
+
+=== Step Distributions
+
+// \( \Delta \phi = 10^{-4} \)
+
+image::hsdphi_steps_d0.0001_t100_n40.svg["", 65%, title="", caption="", align=center]
+
+=== Step Distributions
+
+// \( \Delta \phi = 10^{-5} \)
+
+image::hsdphi_steps_d0.00001_t100_n40.svg["", 65%, title="", caption="", align=center]
+
+=== Step Distributions Close to Jamming
+
+image::hsdphi_steps_t100_n40.svg["", 60%, title="", caption="", align=center]
+
+=== Step Distributions Close to Jamming
+
+image::hsdphi_steps_t100_n100.svg["", 60%, title="", caption="", align=center]
+
+== \( \alpha_2 \)
+
+image::hsdphi_a2s.svg["", 65%, title="", caption="", align=center]
+
+=== \( \alpha_2 \)
+
+image::hsdphi_a2s_log.svg["", 65%, title="", caption="", align=center]
+
+== Back to Glassy Behavior
+
+image::hs_a2_log_fit.svg["", 40%, title="", caption="", align=center]
+
+ - Glassy Behavior
+   * How does this scale with N?
+   * Can we get larger \( \alpha_2 \) values for smaller N?
+   * Fit the step distributions to the sum of two gaussians
