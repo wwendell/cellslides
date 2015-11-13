@@ -20,6 +20,8 @@ copies: Makefile | imgs
 	cp -u ~/work/cells/imgs/hsdphi_steps_t100_n40.svg imgs
 	cp -u ~/work/cells/imgs/hsdphi_steps_t100_n100.svg imgs
 	
+	cp -u ~/work/cells/imgs/hs_steps_F0.59.svg imgs/
+	
 	cp -u ~/work/cells/imgs/hsdphi_a2s.svg imgs
 	cp -u ~/work/cells/imgs/hsdphi_a2s_log.svg imgs
 	

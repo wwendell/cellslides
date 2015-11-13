@@ -30,19 +30,57 @@ image::n100_r1.4_s100_F0.001_t2.png["", 35%, title="", caption="", align=center]
 
 // \( \Delta \phi = 10^{-3} \)
 
-image::hsdphi_steps_d0.001_t100_n40.svg["", 65%, title="", caption="", align=center]
+[cols="^a,^a",grid="none",frame="none"]
+|==================================
+
+| Close to Jamming:
+| Glassy: 
+
+| \( \Delta \phi = \phi_J - \phi = -10^{-3} \)
+| \( \phi = 0.59 \), \( \Delta \phi = -0.05 \)
+
+| image::hsdphi_steps_d0.001_t100_n40.svg["", 100%, title="", caption="", align=center]
+| image::hs_steps_F0.59.svg["", 100%, title="", caption="", align=center]
+
+|==================================
 
 === Step Distributions
 
 // \( \Delta \phi = 10^{-4} \)
 
-image::hsdphi_steps_d0.0001_t100_n40.svg["", 65%, title="", caption="", align=center]
+
+[cols="^a,^a",grid="none",frame="none"]
+|==================================
+
+| Close to Jamming:
+| Glassy: 
+
+| \( \Delta \phi = \phi_J - \phi = -10^{-4} \)
+| \( \phi = 0.59 \), \( \Delta \phi = -0.05 \)
+
+| image::hsdphi_steps_d0.0001_t100_n40.svg["", 100%, title="", caption="", align=center]
+| image::hs_steps_F0.59.svg["", 100%, title="", caption="", align=center]
+
+|==================================
 
 === Step Distributions
 
 // \( \Delta \phi = 10^{-5} \)
 
-image::hsdphi_steps_d0.00001_t100_n40.svg["", 65%, title="", caption="", align=center]
+
+[cols="^a,^a",grid="none",frame="none"]
+|==================================
+
+| Close to Jamming:
+| Glassy: 
+
+| \( \Delta \phi = \phi_J - \phi = -10^{-5} \)
+| \( \phi = 0.59 \), \( \Delta \phi = -0.05 \)
+
+| image::hsdphi_steps_d0.00001_t100_n40.svg["", 100%, title="", caption="", align=center]
+| image::hs_steps_F0.59.svg["", 100%, title="", caption="", align=center]
+
+|==================================
 
 === Step Distributions Close to Jamming
 
