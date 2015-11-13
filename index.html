@@ -25,74 +25,46 @@
 			}
 		</style>
 		
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+		<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({
+		    extensions: ["tex2jax.js"],
+		    jax: ["input/TeX", "output/HTML-CSS"],
+		    tex2jax: {
+		      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+		      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+		      processEscapes: true
+		    },
+		    "HTML-CSS": { availableFonts: ["TeX"] }
+		  });
+		</script>
+		<script type="text/javascript"  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js">
+		</script>
+		
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
 	</head>
 
 	<body>
-
 		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div style="width:80%;margin-top:10%;margin-left:20%;margin-right:20%;margin-bottom:20%">
-				<section>
-					<h2>Presentations</h2>
-					<ul>
-						<li><a href="141107.html">November 7: $\alpha_2$ in Monodisperse Systems</a></li>
-						<li><a href="141114.html">November 14: Group Meeting</a></li>
-						<li><a href="150505-active-matter/index.html">May 15, 2015: Group Meeting</a></li>
-						<li><a href="150521/index.html">May 21, 2015: Janus Particles, Nucleoid Flow, Active Matter</a> (<a href="150521/index2.html">single page</a>)</li>
-						<li><a href="150601-corey-update/index.html">June 1, 2015: \(\alpha_2\) and Active Matter</a> (<a href="150601-corey-update/index2.html">single page</a>)</li>
-						<li><a href="150605-weekly-active-matter-and-temperature/index.html">June 5, 2015: Active Matter Update</a> (<a href="150605-weekly-active-matter-and-temperature/index2.html">single page</a>)</li>
-						<li><a href="150617-weekly-active-harmonic/index.html">June 17, 2015: Active Matter Update</a> (<a href="150617-weekly-active-harmonic/index2.html">single page</a>)</li>
-						<li><a href="150903-weekly-update/index.html">Sep 3, 2015: Hard Spheres</a> (<a href="150903-weekly-update/index2.html">single page</a>)</li>
-						<li><a href="150918-weekly-update/index.html">Sep 18, 2015: Hard Spheres and Polymers</a> (<a href="150918-weekly-update/index2.html">single page</a>)</li>
-						<li><a href="151002-weekly-update/index.html">Oct 2, 2015: Hard Sphere Aging and Variability</a> (<a href="151002-weekly-update/index2.html">single page</a>)</li>
-						<li><a href="151016-group-meeting/index.html">Oct 16, 2015: Group Meeting</a> (<a href="151016-group-meeting/index2.html">single page</a>)</li>
-					</ul>
-				</section>
-			</div>
-		</div>
-
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
-
-		<script>
-
-			// Full list of configuration options available at:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				
-				width: "80%",
-				height: "100%",
-
-				// Factor of the display size that should remain empty around the content
-				margin: 0.1,
-
-				// Bounds for smallest/largest possible scale to apply to content
-				minScale: 0.2,
-				maxScale: 1.0,
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				
-				math: {
-					// Use secure mathjax so that it will work with https://git.yale.edu
-					mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
-					config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
-				},
-
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }																												,
-					{ src: 'plugin/math/math.js', async: true }
-				]
-			});
-
-		</script>
+		<section>
+			<h2>Presentations</h2>
+			<ul>
+				<li><a href="141107.html">November 7: $\alpha_2$ in Monodisperse Systems</a></li>
+				<li><a href="141114.html">November 14: Group Meeting</a></li>
+				<li><a href="150505-active-matter/index.html">May 15, 2015: Group Meeting</a></li>
+				<li><a href="150521/index.html">May 21, 2015: Janus Particles, Nucleoid Flow, Active Matter</a> (<a href="150521/index2.html">single page</a>)</li>
+				<li><a href="150601-corey-update/index.html">June 1, 2015: \(\alpha_2\) and Active Matter</a> (<a href="150601-corey-update/index2.html">single page</a>)</li>
+				<li><a href="150605-weekly-active-matter-and-temperature/index.html">June 5, 2015: Active Matter Update</a> (<a href="150605-weekly-active-matter-and-temperature/index2.html">single page</a>)</li>
+				<li><a href="150617-weekly-active-harmonic/index.html">June 17, 2015: Active Matter Update</a> (<a href="150617-weekly-active-harmonic/index2.html">single page</a>)</li>
+				<li><a href="150903-weekly-update/index.html">Sep 3, 2015: Hard Spheres</a> (<a href="150903-weekly-update/index2.html">single page</a>)</li>
+				<li><a href="150918-weekly-update/index.html">Sep 18, 2015: Hard Spheres and Polymers</a> (<a href="150918-weekly-update/index2.html">single page</a>)</li>
+				<li><a href="151002-weekly-update/index.html">Oct 2, 2015: Hard Sphere Aging and Variability</a> (<a href="151002-weekly-update/index2.html">single page</a>)</li>
+				<li><a href="151016-group-meeting/index.html">Oct 16, 2015: Group Meeting</a> (<a href="151016-group-meeting/index2.html">single page</a>)</li>
+				<li><a href="151023-weekly/index.html">Oct 23, 2015: α₂ Close to Jamming</a> (<a href="151023-weekly/index2.html">single page</a>)</li>
+				<li><a href="151112-weekly/index.html">Nov 11, 2015: α₂ Close to Jamming</a> (<a href="151112-weekly/index2.html">single page</a>)</li>
+			</ul>
+		</section></div>
 	</body>
 </html>
