@@ -115,6 +115,17 @@ image::hsdphi_steps_t100_n100.svg["", 60%, title="", caption="", align=center]
 
 |==================================
 
+
+=== Rearrangements
+
+image::diagram-rearrangements-and-phi.svg["", 60%, title="", caption="", align=center]
+
+Hypothesis: Micro-rearrangements and rearrangements occur at different values of \( \Delta \phi\), with \( \Delta \phi \) dependent on system size.
+
+=== Micro-Rearrangements
+
+video::floater_micro_rearrange.mp4[options=autoplay,loop]
+
 == Back to Glassy Behavior
 
 image::hs_a2_log_fit.svg["", 60%, title="", caption="", align=center]
