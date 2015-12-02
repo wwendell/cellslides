@@ -40,7 +40,7 @@ video::floater_bounce.mp4[options=autoplay,loop]
 | Close to Jamming:
 | Glassy: 
 
-| \( \Delta \phi = \phi_J - \phi = -10^{-4} \)
+| \( \Delta \phi = \phi - \phi_J = -10^{-4} \)
 | \( \phi = 0.59 \), \( \Delta \phi = -0.05 \)
 
 | image::hsdphi_steps_d0.0001_t100_n40.svg["", 100%, title="", caption="", align=center]
