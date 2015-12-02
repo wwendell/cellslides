@@ -14,8 +14,14 @@ copies: Makefile | imgs
 	cp -u ~/work/cells/imgs/hs_steps_F0.57.svg imgs/
 	cp -u ~/work/cells/imgs/hs_steps_F0.58.svg imgs/
 	cp -u ~/work/cells/imgs/hs_steps_F0.59.svg imgs/
-	cp -u ~/work/cells/imgs/hs_a2_log_fit_many.svg imgs/
-	cp -u ~/work/cells/imgs/hs_a2.svg imgs/
+	
+	# cp -u ~/work/cells/imgs/hs_a2.svg imgs/
+	cp -u ~/work/cells/imgs/hs_a2_log_fit.svg imgs/
+	cp -u ~/work/cells/imgs/hardspheresNs_a2.svg imgs/
+	cp -u ~/work/cells/imgs/hardspheresNs_a2_fit.svg imgs/
+	# cp -u ~/work/cells/imgs/hardspheresNs_a2_fit_phistar.svg imgs/
+	cp -u ~/work/cells/imgs/hardspheresNs_a2_fit_params.svg imgs/
+	
 	
 	cp -u ~/work/cells/imgs/aging_cartoon.svg imgs/
 	cp -u ~/work/cells/imgs/hslocpairs_a2_time_f0.55.svg imgs/

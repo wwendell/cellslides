@@ -1,4 +1,4 @@
-= Understanding Non-Gaussian Behavior
+= Non-Gaussian Behavior in Hard Spheres
 // Wendell Smith
 :source-highlighter: pygments
 :pygments-style: autumn
@@ -65,22 +65,24 @@ image::hs_steps_F0.59.svg["", 60%, title="", caption="", align=center]
 
 === The Non-Gaussian Parameter \( \alpha_2 \)
 
-image::hs_a2.svg["", 60%, title="", caption="", align=center]
+image::hardspheresNs_a2.svg["", 60%, title="", caption="", align=center]
+
+=== System Size Dependence of \( \alpha_2 \)
+
+image::hardspheresNs_a2_fit.svg["", 60%, title="", caption="", align=center]
+
+Lines drawn are \(A \left(\phi^\star - \phi\right)^n\), and \(\phi^\star \) is fitted
+
+=== System Size Dependence of \( \alpha_2 \)
+
+image::hardspheresNs_a2_fit_params.svg["", 80%, title="", caption="", align=center]
 
 === α₂ goes to ∞?
 
-image::hs_a2_log_fit_many.svg["", 40%, title="", caption="", align=center]
-
- - Line drawn is \(A \left(\phi^\star - \phi\right)^n\), where
-   * \( \phi^\star = 0.5999 \pm 0.0011\) (jamming is at \(\phi^J = 0.634\pm0.004\) )
-   * \( n = -1.21 \pm 0.05 \)
-
-=== α₂ goes to ∞?
-
-image::hs_a2_log_fit_many.svg["", 40%, title="", caption="", align=center]
+image::hardspheresNs_a2_fit.svg["", 40%, title="", caption="", align=center]
 
  - *Provocative*, but *inconclusive*
-    * \( \phi^\star = 0.5999 \pm 0.0011\) is an unusual density
+    * \( \phi^\star = 0.600 \pm 0.001\) is an unusual density
     * There is less than two orders of magnitude on this plot
     * 3.5 is a long ways from ∞
 
