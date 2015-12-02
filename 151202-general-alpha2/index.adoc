@@ -18,7 +18,7 @@
 == What does non-Gaussian mean?
 
 === What does non-Gaussian mean?
- - \( \alpha_2 = \frac{\left< x^4 \right> }{3 \left< x^2 \right> } - 1 \) is the "non-Gaussian parameter"
+ - \( \alpha_2 = \frac{\left< x^4 \right> }{3 \left< x^2 \right> } - 1 \) is the "non-Gaussian parameter", used as a measure of dynamical heterogeneities
  - For a Gaussian distribution, \( \left< x^4 \right> = 3\left< x^2 \right> \), so \( \alpha_2 = 0 \)
  - Can be calculated from particle-tracking
 
@@ -94,7 +94,7 @@ image::example-gaussian-pairs-alpha2.svg["", 45%, title="", caption="", align=ce
 
  - Start with the sum of two gaussians \( P(r) \propto A r ^ 2 \sigma ^ 2 e ^ {-\frac{r ^ 2}{\sigma ^ 2}} + B r ^ 2 e ^ {-r^2} \)
    * *Increasing σ* while *decreasing \( \frac{A}{B} \)* gives a larger \( \alpha_2 \)
-   * More specifically: For a given σ, \( \frac{A}{B} = \frac{\sigma ^ 2}{1 + \sigma^2} \) yields tme maximum \( \alpha_2 = \frac{\left(\delta ^ 2-1\right)^2}{4 \delta ^2} \)
+   * More specifically: For a given σ, \( \frac{A}{B} = \frac{\sigma ^ 2}{1 + \sigma^2} \) yields the maximum \( \alpha_2 = \frac{\left(\delta ^ 2-1\right)^2}{4 \delta ^2} \)
    
 === Back to the Step Distributions
 
@@ -128,6 +128,73 @@ image::aging_cartoon.svg["", 45%, title="Cartoon", caption="", align=center]
 
 |==================================
 
+==  Close to Jamming
+
+=== Close to Jamming
+
+image::n100_r1.4_s100_F0.001_t2.png["", 35%, title="", caption="", align=center]
+
+ - Glassy behavior starts at \( \phi \approx 0.55 – 0.59 \)
+ - Jamming is at \( \phi \approx 0.64 \)
+ - What happens if we go *really* close to jamming?
+  * Permanent Caging
+  * Floaters
+  
+  
+
+=== Step Distributions Close to Jamming
+
+[cols="^a,^a",grid="none",frame="none"]
+|==================================
+
+| Close to Jamming:
+| Glassy: 
+
+| image::hsdphi_steps_d0.0001_t100_n40.svg["", 90%, title="", caption="", align=center]
+| image::hs_steps_F0.59.svg["", 90%, title="", caption="", align=center]
+
+| Peak at \( 10^{-2} \) : Tight Cages
+| Peak at \( 10^{-1} \) : Caged Floaters
+
+| Peak at \( 10^{-1} \) : Caged Particles
+| Peak at \( 10^{0} \) : Rearrangements
+
+|==================================
+
+
+=== Step Distributions Close to Jamming
+
+image::hsdphi_steps_t100_n100.svg["", 60%, title="", caption="", align=center]
+
+[cols="^a,^a,^a",grid="none",frame="none"]
+|==================================
+
+| _Solid_: Backbone
+| _Dashed_: Floaters
+| _Thin Dotted_: Both
+
+|==================================
+
+=== Rearrangements
+
+// image::inherent_found_n40_t1000.svg["", 50%, title="", caption="", align=center]
+
+[cols="^a,^a",grid="none",frame="none"]
+|==================================
+
+| image::inherent_found_n40_t1000.svg["", 90%, title="", caption="", align=center]
+| image::inherent_found_n100_t1000.svg["", 90%, title="", caption="", align=center]
+
+|==================================
+
+
+ - Each dot represents a single system
+ - At 1000 timepoints over the course of the simulation, a snapshot was taken,
+   and the structure was "minimized" to find the inherent structures visited
+ - Systems seem able to access either a very limited number of inherent 
+   structures, or a very large number
+
+
 == Other Directions 
 
 === Fitting The Step Distributions
@@ -138,12 +205,7 @@ image::aging_cartoon.svg["", 45%, title="Cartoon", caption="", align=center]
 image::hs_steps_fitted_F0.584.svg["", 45%, title="Cartoon", caption="", align=center]
 
  * This is hard.
- 
-=== Coming from Above
 
- * What happens at packing fractions just below jamming?
- * What about floaters?
- 
 == That's all.
 
 === Thanks!
