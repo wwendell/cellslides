@@ -1,5 +1,5 @@
 = Non-Gaussian Behavior in Hard Spheres
-// Wendell Smith
+Wendell Smith
 :source-highlighter: pygments
 :pygments-style: autumn
 :revealjs_theme: simple
@@ -36,16 +36,16 @@
 
  - \( \alpha_2 \) measures how "not gaussian" the distribution is
 
-[cols="^a,^a,^a",grid="none",frame="none"]
+[cols="^a,^a,^a",grid="cols",frame="none"]
 |==================================
 
-| *Diffusion* | *Mixed* | *Caging*
+.>| *Diffusion* .>| *Mixed* .>| *Caging*
 
-| image::example-diffusion-P-t.svg["", 100%, title="", caption="", align=center]
-| image::example-mixed-P-t.svg["", 100%, title="", caption="", align=center]
-| image::example-diffusion-caged.svg["", 100%, title="", caption="", align=center]
+.^| image::example-diffusion-P-t.svg["", 100%, title="", caption="", align=center]
+.^| image::example-mixed-P-t.svg["", 100%, title="", caption="", align=center]
+.^| image::example-diffusion-caged.svg["", 100%, title="", caption="", align=center]
 
-| \( \alpha_2 = 0 \) | \( \alpha_2 > 0 \) | \( \alpha_2 = -\frac{1}{5} \)
+.<| \( \alpha_2 = 0 \) .<| \( \alpha_2 > 0 \) .<| \( \alpha_2 = -\frac{1}{5} \)
 
 |==================================
 
