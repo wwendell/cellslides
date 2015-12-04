@@ -7,7 +7,7 @@ index2.html: index.adoc imgs/* Makefile
 	asciidoctor -b html5 index.adoc -o index2.html
 
 copies: Makefile | imgs
-	cp -u ~/work/cells/imgs/hsdphi_steps_t100_n100.svg imgs		
+	cp -u ~/work/cells/imgs/hsdphi_steps_d0.0001_t100_n40.svg imgs/
 	cp -u ~/work/cells/imgs/hs_steps_F0.59.svg imgs/
 	
 	cp -u ~/work/cells/imgs/inherent_found_n100_t100.svg imgs/
