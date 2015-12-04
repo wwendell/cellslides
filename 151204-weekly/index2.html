@@ -485,51 +485,56 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_close_to_jamming">Close to Jamming</h2>
+<h2 id="_rearrangements">Rearrangements</h2>
 <div class="sectionbody">
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="imgs/n100_r1.4_s100_F0.001_t2.png" alt="" width="35%">
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Glassy behavior starts at \( \phi \approx 0.55 – 0.59 \)</p>
-</li>
-<li>
-<p>Jamming is at \( \phi \approx 0.64 \)</p>
-</li>
-<li>
-<p>What happens if we go <strong>really</strong> close to jamming?</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Permanent Caging</p>
-</li>
-<li>
-<p>Floaters</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="_floaters">Floaters</h3>
 <div class="videoblock">
 <div class="content">
-<video src="imgs/floater_bounce.mp4" width="loop" autoplay controls>
+<video src="imgs/rearrange_n100_s68_F0.005.mp4" height="720" autoplay controls loop>
+Your browser does not support the video tag.
+</video>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_micro_rearrangements">Micro-Rearrangements</h3>
+<div class="videoblock">
+<div class="content">
+<video src="imgs/micro-rearrange_n100_s22_F0.001.mp4" height="800" autoplay controls loop>
 Your browser does not support the video tag.
 </video>
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_quantifying_rearrangements">Quantifying Rearrangements</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Run a standard hard sphere simulation for a long time.</p>
+</li>
+<li>
+<p>At 1000 different points, take a snapshot.</p>
+</li>
+<li>
+<p>Plug the snapshot into a packing minimizer, and see what packing each snapshot gives.</p>
+</li>
+<li>
+<p>Quantify how many of these snapshot packings are the same or different from previous snapshots.</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_step_distributions">Step Distributions</h2>
+<h2 id="_quantifying_rearrangements_2">Quantifying Rearrangements</h2>
 <div class="sectionbody">
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="imgs/inherent_found_n100_t100.svg" alt="" width="60%">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_distributions">Step Distributions</h3>
 <table class="tableblock frame-none grid-none spread">
 <colgroup>
 <col style="width: 50%;">
@@ -538,15 +543,15 @@ Your browser does not support the video tag.
 <tbody>
 <tr>
 <td class="tableblock halign-center valign-top"><div><div class="paragraph">
-<p>Close to Jamming:</p>
+<p>Close to Jamming</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div><div class="paragraph">
-<p>Glassy:</p>
+<p>Glassy</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"><div><div class="paragraph">
-<p>\( \Delta \phi = \phi_J - \phi = -10^{-4} \)</p>
+<p>\( \Delta \phi = \phi - \phi_J = -10^{-4} \)</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div><div class="paragraph">
 <p>\( \phi = 0.59 \), \( \Delta \phi = -0.05 \)</p>
@@ -566,164 +571,56 @@ Your browser does not support the video tag.
 </tr>
 </tbody>
 </table>
-<div class="sect2">
-<h3 id="_floaters_2">Floaters</h3>
-<table class="tableblock frame-none grid-none spread">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top"><div><div class="paragraph">
-<p>Close to Jamming:</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div><div class="paragraph">
-<p>Glassy:</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><div><div class="videoblock">
-<div class="content">
-<video src="imgs/floater_bounce.mp4" width="loop" autoplay controls>
-Your browser does not support the video tag.
-</video>
-</div>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div><div class="videoblock">
-<div class="content">
-<video src="imgs/floater_rearrange.mp4" width="loop" autoplay controls>
-Your browser does not support the video tag.
-</video>
-</div>
-</div></div></td>
-</tr>
-</tbody>
-</table>
 </div>
 <div class="sect2">
 <h3 id="_step_distributions_2">Step Distributions</h3>
-<table class="tableblock frame-none grid-none spread">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top"><div><div class="paragraph">
-<p>Close to Jamming:</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div><div class="paragraph">
-<p>Glassy:</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="imgs/hsdphi_steps_d0.0001_t100_n40.svg" alt="" width="90%">
+<div class="paragraph">
+<p>Low Δφ</p>
 </div>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div><div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="imgs/hs_steps_F0.59.svg" alt="" width="90%">
-</div>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><div><div class="paragraph">
-<p>Peak at \( 10^{-2} \) : Tight Cages</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div><div class="paragraph">
-<p>Peak at \( 10^{-1} \) : Caged Floaters</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><div><div class="paragraph">
-<p>Peak at \( 10^{-1} \) : Caged Particles</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div><div class="paragraph">
-<p>Peak at \( 10^{0} \) : Rearrangements</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect2">
-<h3 id="_step_distributions_close_to_jamming">Step Distributions Close to Jamming</h3>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="imgs/hsdphi_steps_t100_n100.svg" alt="" width="60%">
-</div>
-</div>
-<table class="tableblock frame-none grid-none spread">
-<colgroup>
-<col style="width: 33%;">
-<col style="width: 33%;">
-<col style="width: 33%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top"><div><div class="paragraph">
-<p><em>Solid</em>: Backbone</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div><div class="paragraph">
-<p><em>Dashed</em>: Floaters</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div><div class="paragraph">
-<p><em>Thin Dotted</em>: Both</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect2">
-<h3 id="_rearrangements">Rearrangements</h3>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="imgs/diagram-rearrangements-and-phi.svg" alt="" width="60%">
+<img src="imgs/cartoon-rearrange-lowphi.svg" alt="" width="50%">
 </div>
 </div>
 <div class="paragraph">
-<p>Hypothesis: Micro-rearrangements and rearrangements occur at different values of \( \Delta \phi\), with \( \Delta \phi \) dependent on system size.</p>
+<p>Systems are completely fixed, unable to rearrange at all.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_micro_rearrangements">Micro-Rearrangements</h3>
-<div class="videoblock">
-<div class="content">
-<video src="imgs/floater_micro_rearrange.mp4" width="loop" autoplay controls>
-Your browser does not support the video tag.
-</video>
+<h3 id="_step_distributions_3">Step Distributions</h3>
+<div class="paragraph">
+<p>Moderate Δφ</p>
 </div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_back_to_glassy_behavior">Back to Glassy Behavior</h2>
-<div class="sectionbody">
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="imgs/hs_a2_log_fit.svg" alt="" width="60%">
-</div>
-</div>
-<div class="sect2">
-<h3 id="_system_size_dependence_of_alpha_2">System Size Dependence of \( \alpha_2 \)</h3>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="imgs/hardspheresNs_a2_fit.svg" alt="" width="60%">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_system_size_dependence_of_alpha_2_2">System Size Dependence of \( \alpha_2 \)</h3>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="imgs/hardspheresNs_a2_fit_phistar.svg" alt="" width="60%">
+<img src="imgs/cartoon-rearrange-midphi.svg" alt="" width="50%">
 </div>
 </div>
 <div class="paragraph">
-<p>Does \(\phi^\star \) increase with \(N\)?</p>
+<p>Some systems are able to rearrange, but only as micro-rearrangements.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_distributions_4">Step Distributions</h3>
+<div class="paragraph">
+<p>Large Δφ</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="imgs/cartoon-rearrange-highphi-arrow.svg" alt="" width="50%">
+</div>
+</div>
+<div class="paragraph">
+<p>Some systems are still stuck in micro-rearrangements, but many can fully rearrange.</p>
+</div>
+<div class="paragraph">
+<p>As density decreases, more and more systems will be able to rearrange.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_hypothesis">Hypothesis</h3>
+<div class="paragraph">
+<p>Rearranging systems are glassy, and could be modeled as caged at short times, and as a random-walk from packing to packing at long times.</p>
 </div>
 </div>
 </div>
@@ -731,7 +628,7 @@ Your browser does not support the video tag.
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-11-13 11:52:32 EST
+Last updated 2015-12-04 13:46:03 EST
 </div>
 </div>
 <script type="text/x-mathjax-config">
