@@ -14,31 +14,35 @@
 :stem: latexmath
 :imagesdir: imgs
 // :toc:
- 
 
-== Close to Jamming
+== Rearrangements
 
-image::n100_r1.4_s100_F0.001_t2.png["", 35%, title="", caption="", align=center]
+video::rearrange_n100_s68_F0.005.mp4[height=720, options="autoplay,loop"]
 
- - Glassy behavior starts at \( \phi \approx 0.55 – 0.59 \)
- - Jamming is at \( \phi \approx 0.64 \)
- - What happens if we go *really* close to jamming?
-   * Permanent Caging
-   * Floaters
+=== Micro-Rearrangements
+
+video::micro-rearrange_n100_s22_F0.001.mp4[height=800, options="autoplay,loop"]
+
+=== Quantifying Rearrangements
+
+ - Run a standard hard sphere simulation for a long time.
+ - At 1000 different points, take a snapshot.
+ - Plug the snapshot into a packing minimizer, and see what packing each snapshot gives.
+ - Quantify how many of these snapshot packings are the same or different from previous snapshots.
    
-=== Floaters
+== Quantifying Rearrangements
 
-video::floater_bounce.mp4[options=autoplay,loop]
-   
-== Step Distributions
+image::inherent_found_n100_t100.svg["", 60%, title="", caption="", align=center]
+
+=== Step Distributions
 
 // \( \Delta \phi = 10^{-3} \)
 
 [cols="^a,^a",grid="none",frame="none"]
 |==================================
 
-| Close to Jamming:
-| Glassy: 
+| Close to Jamming
+| Glassy 
 
 | \( \Delta \phi = \phi - \phi_J = -10^{-4} \)
 | \( \phi = 0.59 \), \( \Delta \phi = -0.05 \)
@@ -48,94 +52,32 @@ video::floater_bounce.mp4[options=autoplay,loop]
 
 |==================================
 
+=== Step Distributions
 
-=== Floaters
+Low Δφ
 
-[cols="^a,^a",grid="none",frame="none"]
-|==================================
+image::cartoon-rearrange-lowphi.svg["", 50%, title="", caption="", align=center]
 
-| Close to Jamming:
-| Glassy: 
-
-| video::floater_bounce.mp4[options=autoplay,loop]
-| video::floater_rearrange.mp4[options=autoplay,loop]
-
-|==================================
-
+Systems are completely fixed, unable to rearrange at all.
 
 === Step Distributions
 
-// \( \Delta \phi = 10^{-4} \)
+Moderate Δφ
 
+image::cartoon-rearrange-midphi.svg["", 50%, title="", caption="", align=center]
 
-[cols="^a,^a",grid="none",frame="none"]
-|==================================
+Some systems are able to rearrange, but only as micro-rearrangements.
 
-| Close to Jamming:
-| Glassy: 
+=== Step Distributions
 
-| image::hsdphi_steps_d0.0001_t100_n40.svg["", 90%, title="", caption="", align=center]
-| image::hs_steps_F0.59.svg["", 90%, title="", caption="", align=center]
+Large Δφ
 
-| Peak at \( 10^{-2} \) : Tight Cages
-| Peak at \( 10^{-1} \) : Caged Floaters
+image::cartoon-rearrange-highphi-arrow.svg["", 50%, title="", caption="", align=center]
 
-| Peak at \( 10^{-1} \) : Caged Particles
-| Peak at \( 10^{0} \) : Rearrangements
+Some systems are still stuck in micro-rearrangements, but many can fully rearrange.
 
-|==================================
+As density decreases, more and more systems will be able to rearrange.
 
+=== Hypothesis
 
-////
-=== Step Distributions Close to Jamming
-
-image::hsdphi_steps_t100_n40.svg["", 60%, title="", caption="", align=center]
-
-[cols="^a,^a,^a",grid="none",frame="none"]
-|==================================
-
-| _Solid_: Backbone
-| _Dashed_: Floaters
-| _Thin Dotted_: Both
-
-|==================================
-////
-
-
-=== Step Distributions Close to Jamming
-
-image::hsdphi_steps_t100_n100.svg["", 60%, title="", caption="", align=center]
-
-[cols="^a,^a,^a",grid="none",frame="none"]
-|==================================
-
-| _Solid_: Backbone
-| _Dashed_: Floaters
-| _Thin Dotted_: Both
-
-|==================================
-
-
-=== Rearrangements
-
-image::diagram-rearrangements-and-phi.svg["", 60%, title="", caption="", align=center]
-
-Hypothesis: Micro-rearrangements and rearrangements occur at different values of \( \Delta \phi\), with \( \Delta \phi \) dependent on system size.
-
-=== Micro-Rearrangements
-
-video::floater_micro_rearrange.mp4[options=autoplay,loop]
-
-== Back to Glassy Behavior
-
-image::hs_a2_log_fit.svg["", 60%, title="", caption="", align=center]
-
-=== System Size Dependence of \( \alpha_2 \)
-
-image::hardspheresNs_a2_fit.svg["", 60%, title="", caption="", align=center]
-
-=== System Size Dependence of \( \alpha_2 \)
-
-image::hardspheresNs_a2_fit_phistar.svg["", 60%, title="", caption="", align=center]
-
-Does \(\phi^\star \) increase with \(N\)?
+Rearranging systems are glassy, and could be modeled as caged at short times, and as a random-walk from packing to packing at long times.

@@ -7,23 +7,17 @@ index2.html: index.adoc imgs/* Makefile
 	asciidoctor -b html5 index.adoc -o index2.html
 
 copies: Makefile | imgs
-	cp -u ~/work/cells/imgs/n100_r1.4_s100_F0.001_t2.png imgs
-	cp -u ~/work/cells/imgs/floater_bounce.mp4 imgs
-	cp -u ~/work/cells/imgs/floater_rearrange.mp4 imgs
-	cp -u ~/work/cells/imgs/floater_micro_rearrange.mp4 imgs
-	
-	cp -u ~/work/cells/imgs/diagram-rearrangements-and-phi.svg imgs
-	
-	cp -u ~/work/cells/imgs/hsdphi_steps_d0.0001_t100_n40.svg imgs
-	
-	cp -u ~/work/cells/imgs/hsdphi_steps_t100_n40.svg imgs
-	cp -u ~/work/cells/imgs/hsdphi_steps_t100_n100.svg imgs
-			
+	cp -u ~/work/cells/imgs/hsdphi_steps_t100_n100.svg imgs		
 	cp -u ~/work/cells/imgs/hs_steps_F0.59.svg imgs/
 	
-	cp -u ~/work/cells/imgs/hs_a2_log_fit.svg imgs/
-	cp -u ~/work/cells/imgs/hardspheresNs_a2_fit.svg imgs/
-	cp -u ~/work/cells/imgs/hardspheresNs_a2_fit_phistar.svg imgs/
+	cp -u ~/work/cells/imgs/inherent_found_n100_t100.svg imgs/
+	
+	cp -u ~/work/cells/imgs/rearrange_n100_s68_F0.005.mp4 imgs/
+	cp -u ~/work/cells/imgs/micro-rearrange_n100_s22_F0.001.mp4 imgs/
+	
+	cp -u ~/work/cells/imgs/cartoon-rearrange-lowphi.svg imgs/
+	cp -u ~/work/cells/imgs/cartoon-rearrange-midphi.svg imgs/
+	cp -u ~/work/cells/imgs/cartoon-rearrange-highphi-arrow.svg imgs/
 	
 imgs:
 	mkdir imgs
